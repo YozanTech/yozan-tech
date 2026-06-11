@@ -116,7 +116,7 @@ export default function Home() {
         <FadeIn
           delay={0.8}
           initialX={20}
-          className="hidden lg:flex flex-1 w-full rounded-2xl items-center justify-center font-bold text-surface-600 border-dashed h-64 lg:h-full border-surface-500 border bg-surface-200 shadow-inner"
+          className="hidden lg:flex flex-1 w-full rounded-2xl items-center justify-center font-bold text-surface-800 border-dashed h-64 lg:h-full border-surface-500 border bg-surface-200 shadow-inner"
         >
           Image Placeholder
         </FadeIn>

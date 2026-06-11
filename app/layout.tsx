@@ -60,7 +60,9 @@ export default function RootLayout({
     >
       <body className="relative flex flex-col selection:bg-brand-400 selection:text-surface-50">
         <Header />
-        {children}
+        <main className="flex flex-col flex-1 w-full">
+          {children}
+        </main>
         <MobileNav />
         <Footer />
       </body>
