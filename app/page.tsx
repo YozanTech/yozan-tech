@@ -1,65 +1,45 @@
-import Image from "next/image";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="flex flex-col">
+      <section className="flex bg-surface-50 h-[calc(100vh-64px)] w-full items-center justify-center p-16 px-24 gap-24 border-b border-surface-200/80">
+        <div className="flex flex-col flex-1 gap-8">
+          <div className="text-surface-600 text-xs flex items-center gap-2 p-2 bg-surface-100 w-fit rounded-full px-4 py-1.5 border-surface-500 border">
+            <Sparkles size={12} className="text-brand-600" />
+            Technology Partners Built For SME
+          </div>
+          <h1 className="font-semibold text-5xl flex flex-col gap-2">
+            <span>Modernizing the</span>
+            <div className="flex items-center text-nowrap gap-4">
+              <span className="text-brand-500">Digital Foundation</span>
+              <span>for SMEs.</span>
+            </div>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+          <div className="flex items-center text-surface-800 w-full">
+            躍棧 (Yozan Tech) provides tailor-made systems, premium websites,
+            and managed cloud services. From the very first line of code to
+            daily maintenance, we are with you for the long haul.
+          </div>
+          <div className="flex items-center gap-6">
+            <button className="flex items-center hover:scale-105 justify-center gap-2.5 bg-brand-600 text-surface-50 px-5 py-2.5 rounded-full cursor-pointer font-bold transition-all hover:bg-brand-700 duration-300 group">
+              Learn About Our Services
+              <ArrowRight
+                size={20}
+                className="group-hover:translate-x-1 transition-all duration-300"
+              />
+            </button>
+            <button className="text-surface-600 border border-surface-300 px-5 py-2.5 rounded-full cursor-pointer hover:bg-surface-100 font-bold transition-all duration-300">
+              Reservation a Free Consultation
+            </button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="flex flex-1 rounded-2xl items-center justify-center font-bold text-surface-600 border-dashed h-full border-surface-500 border">
+          Image Placeholder
         </div>
-      </main>
+      </section>
+
+      <section className="flex bg-transparent h-screen w-full items-center justify-center p-16 px-24 gap-24"></section>
     </div>
   );
 }

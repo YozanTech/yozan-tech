@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand Colors (Warm Rust/Orange) */
+  --color-brand-50: #fdf5f2;
+  --color-brand-100: #fbe5df;
+  --color-brand-200: #f6cdbe;
+  --color-brand-300: #edad97;
+  --color-brand-400: #e2886a;
+  --color-brand-500: #d1623f;
+  --color-brand-600: #bd4f29; /* 原 primary: 0.58 0.14 38 */
+  --color-brand-700: #983e1f;
+  --color-brand-800: #7b331b;
+  --color-brand-900: #652b18;
+  --color-brand-950: #371409;
+
+  /* Surface / Neutral Colors (Warm Beige/Sand) */
+  --color-surface-50: #fffcf4; /* 原 card: 0.995 0.008 80 */
+  --color-surface-100: #fdf8ea; /* 原 background: 0.985 0.012 80 */
+  --color-surface-200: #f2e8d5; /* 原 secondary: 0.95 0.018 75 */
+  --color-surface-300: #ece4da; /* 原 sidebar-accent: 0.92 0.025 75 */
+  --color-surface-400: #e9cfad; /* 原 accent: 0.88 0.065 70 */
+  --color-surface-500: #e3d6c7; /* 原 border: 0.88 0.018 70 */
+  --color-surface-600: #7b675b; /* 原 muted-foreground: 0.48 0.025 50 */
+  --color-surface-700: #664936; /* 原 chart-5: 0.4 0.06 40 */
+  --color-surface-800: #4d3b2e; /* 原 secondary-foreground: 0.28 0.04 45 */
+  --color-surface-900: #423126; /* 原 foreground: 0.24 0.035 45 */
+  --color-surface-950: #291e17;
+
+  /* Danger / Destructive Colors */
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-200: #fecaca;
+  --color-danger-300: #fca5a5;
+  --color-danger-400: #f87171;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626; /* 原 destructive: 0.55 0.21 27 */
+  --color-danger-700: #b91c1c;
+  --color-danger-800: #991b1b;
+  --color-danger-900: #7f1d1d;
+  --color-danger-950: #450a0a;
+
+  /* Chart Colors (其他不同色相的獨立顏色) */
+  --color-chart-2: #b19b5b; /* 原 chart-2: 0.7 0.11 70 (綠金色) */
+  --color-chart-3: #816541; /* 原 chart-3: 0.5 0.08 50 (深棕色) */
+  --color-chart-4: #cbd292; /* 原 chart-4: 0.78 0.09 90 (淺黃綠色) */
+  --color-muted: #f0e7d5; /* 原 muted: 0.945 0.016 75 */
+  --color-background: #f8f1e2; /* 原 sidebar: 0.97 0.014 78 */
+
+  /* Fonts */
+  --font-sans:
+    var(--font-inter), var(--font-noto-sans-tc), ui-sans-serif, system-ui,
+    sans-serif;
+  --font-serif:
+    var(--font-noto-serif-tc), ui-serif, Georgia, Cambria, "Times New Roman",
+    Times, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body,
+html {
+  background: #fbf5ec;
+  color: var(--color-surface-950);
+  background-image: radial-gradient(
+    var(--color-surface-200) 0.5px,
+    transparent 0.1px
+  );
+  background-size: 24px 24px;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
 }
