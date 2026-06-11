@@ -4,19 +4,13 @@ import Link from "next/link";
 import { Home, Coins, Cpu, Info } from "lucide-react";
 import { NAVIGATION } from "@/constants/navigation";
 
-const NAV_ITEMS = [
-  { id: "home", href: "/", icon: Home, label: "Home" },
-  { id: "price", href: "/price", icon: Coins, label: "Price" },
-  { id: "services", href: "/services", icon: Cpu, label: "Services" },
-  { id: "about", href: "/about", icon: Info, label: "About" },
-];
 
 export default function MobileNav() {
   const pathname = usePathname();
 
   return (
     <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-sm z-50 shadow-xl bg-surface-50/80 backdrop-blur-lg border border-surface-200 rounded-full md:hidden flex items-center justify-between p-2 h-12">
-      {NAV_ITEMS.map((item) => {
+      {NAVIGATION.map((item) => {
         const isActive = pathname === item.href;
         const Icon = item.icon;
 
