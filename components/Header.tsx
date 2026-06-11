@@ -1,29 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-
-const NAVIGATION = [
-  {
-    id: "home",
-    label: "Home",
-    href: "/",
-  },
-  {
-    id: "price",
-    label: "Price",
-    href: "/price",
-  },
-  {
-    id: "services",
-    label: "Services",
-    href: "/services",
-  },
-  {
-    id: "about",
-    label: "About",
-    href: "/about",
-  },
-];
+import { NAVIGATION } from "@/constants/navigation";
 
 export default function Header() {
   const pathname = usePathname();
@@ -53,7 +31,7 @@ export default function Header() {
           );
         })}
         <button className="md:text-sm text-[10px] ml-1 cursor-pointer hover:bg-brand-700 bg-brand-600 shadow-md text-surface-50 px-4 py-2 rounded-full transition-all duration-300 font-semibold hover:scale-105">
-          Free Consultation
+          Reserve Consultation
         </button>
       </nav>
     </header>
