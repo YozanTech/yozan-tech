@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Noto_Sans_TC, Noto_Serif_TC } from "next/font/google";
 import Header from "@/components/Header";
 import "./globals.css";
+import MobileNav from "@/components/MobileNav";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans">
         <Header />
         {children}
+        <MobileNav />
       </body>
     </html>
   );
