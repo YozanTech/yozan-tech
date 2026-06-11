@@ -58,7 +58,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${notoSansTC.variable} ${notoSerifTC.variable} flex flex-col h-full antialiased`}
     >
-      <body className="relative flex flex-col">
+      <body className="relative flex flex-col selection:bg-brand-400 selection:text-surface-50">
         <Header />
         {children}
         <MobileNav />
