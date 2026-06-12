@@ -1,35 +1,14 @@
 import {
   ArrowRight,
   Sparkles,
-  BriefcaseBusiness,
-  Globe,
   Cloud,
   Handshake,
   MessagesSquare,
   Wrench,
 } from "lucide-react";
+import { SERVICES } from "@/constants/service";
 import FadeIn from "@/components/FadeIn";
-
-const services = [
-  {
-    label: "Custom Business Systems",
-    icon: BriefcaseBusiness,
-    description:
-      "From internal workflows to automated operations. We build tailored ERPs, CRMs, and dashboards that perfectly fit your unique business logic, eliminating the friction of rigid off-the-shelf software.",
-  },
-  {
-    label: "Premium Corporate Websites",
-    icon: Globe,
-    description:
-      "From high-converting landing pages to robust e-commerce platforms. We craft lightning-fast, SEO-optimized, and visually stunning digital storefronts that elevate your brand and drive actual business growth.",
-  },
-  {
-    label: "Maintenance & Cloud Management",
-    icon: Cloud,
-    description:
-      "Ensuring high availability, bulletproof security, and smooth daily operations. We handle the servers, continuous deployments, and technical monitoring, so you can sleep well and focus entirely on your business.",
-  },
-];
+import ConsultationButton from "@/components/ConsultationButton";
 
 const yozanValues = [
   {
@@ -72,43 +51,37 @@ export default function Home() {
             <Sparkles size={12} className="text-brand-600" />
             Technology Partners Built For SME
           </FadeIn>
-          <FadeIn
-            delay={0.4}
-            initialX={-20}
-            className="font-bold text-3xl text-center md:text-left md:text-4xl flex flex-col gap-2"
-          >
-            <span>Modernizing the</span>
-            <div className="flex flex-wrap items-center gap-2 justify-center md:justify-start">
-              <span className="text-brand-500 text-nowrap">
-                Digital Foundation
-              </span>
-              <span className="text-nowrap">for SMEs.</span>
-            </div>
+          <FadeIn delay={0.4} initialX={-20}>
+            <h1 className="font-bold text-3xl text-center md:text-left md:text-5xl flex flex-col gap-2">
+              <span>Modernizing the</span>
+              <div className="flex flex-wrap items-center gap-2 justify-center md:justify-start">
+                <span className="text-brand-500 text-nowrap">
+                  Digital Foundation
+                </span>
+                <span className="text-nowrap">for SMEs.</span>
+              </div>
+            </h1>
           </FadeIn>
 
-          <FadeIn
-            delay={0.6}
-            initialX={-20}
-            className="flex text-sm md:text-base text-center md:text-left items-center text-surface-800 w-full"
-          >
-            躍棧 (Yozan Tech) provides tailor-made systems, premium websites,
-            and managed cloud services. From the very first line of code to
-            daily maintenance, we are with you for the long haul.
+          <FadeIn delay={0.6} initialX={-20}>
+            <p className="flex text-sm md:text-base text-center md:text-left items-center text-surface-800 w-full">
+              躍棧 (Yozan Tech) provides tailor-made systems, premium websites,
+              and managed cloud services. From the very first line of code to
+              daily maintenance, we are with you for the long haul.
+            </p>
           </FadeIn>
           <div className="flex flex-col md:flex-row text-sm md:text-base  items-start md:items-center gap-4 lg:gap-6 mt-2">
             <FadeIn delay={0.8} initialX={-20}>
-              <button className="flex w-full md:w-auto items-center hover:scale-105 justify-center gap-2.5 bg-brand-600 text-surface-50 px-5 py-2.5 rounded-full cursor-pointer font-bold transition-all hover:bg-brand-700 duration-300 group">
+              <button className="text-sm flex w-full md:w-auto items-center hover:scale-105 justify-center gap-2.5 bg-brand-600 text-surface-50 px-5 py-3 rounded-full cursor-pointer font-bold transition-all hover:bg-brand-700 duration-300 group">
                 Learn About Our Services
                 <ArrowRight
-                  size={20}
+                  size={16}
                   className="group-hover:translate-x-1 transition-all duration-300"
                 />
               </button>
             </FadeIn>
             <FadeIn delay={1.0} initialX={-20}>
-              <button className="text-surface-600 w-full md:w-auto text-center border border-surface-300 px-5 py-2.5 rounded-full cursor-pointer hover:bg-surface-100 font-bold transition-all duration-300 hover:scale-105">
-                Reserve a Free Consultation
-              </button>
+              <ConsultationButton text="Reserve a Free Consultation" variant="outline" />
             </FadeIn>
           </div>
         </div>
@@ -132,25 +105,21 @@ export default function Home() {
           >
             SERVICES
           </FadeIn>
-          <FadeIn
-            delay={0.4}
-            initialX={-20}
-            className="text-3xl md:text-4xl text-surface-900 font-bold"
-          >
-            3 Main Things We Do
+          <FadeIn delay={0.4} initialX={-20}>
+            <h2 className="text-3xl md:text-4xl text-surface-900 font-bold">
+              3 Main Things We Do
+            </h2>
           </FadeIn>
-          <FadeIn
-            delay={0.6}
-            initialX={-20}
-            className="mt-2 text-surface-600 text-sm md:text-base max-w-full md:max-w-2xl leading-relaxed"
-          >
-            We do not pursue large-scale and comprehensive development, but
-            focus on the basic infrastructure that small and medium-sized
-            enterprises truly need.
+          <FadeIn delay={0.6} initialX={-20}>
+            <p className="mt-2 text-surface-600 text-sm md:text-base max-w-full md:max-w-2xl leading-relaxed">
+              We do not pursue large-scale and comprehensive development, but
+              focus on the basic infrastructure that small and medium-sized
+              enterprises truly need.
+            </p>
           </FadeIn>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 w-full mt-4 md:mt-0">
-          {services.map((service, index) => (
+          {SERVICES.map((service, index) => (
             <FadeIn
               delay={0.8 + index * 0.2}
               initialY={20}
@@ -164,7 +133,7 @@ export default function Home() {
                 {service.label}
               </h3>
               <p className="text-surface-600 text-sm leading-relaxed">
-                {service.description}
+                {service.shortDescription}
               </p>
             </FadeIn>
           ))}
@@ -181,12 +150,10 @@ export default function Home() {
           >
             WHY YOZAN TECH
           </FadeIn>
-          <FadeIn
-            delay={0.4}
-            initialX={-20}
-            className="text-3xl md:text-4xl text-surface-900 font-bold"
-          >
-            Why Choose Yozan Tech?
+          <FadeIn delay={0.4} initialX={-20}>
+            <h2 className="text-3xl md:text-4xl text-surface-900 font-bold">
+              Why Choose Yozan Tech?
+            </h2>
           </FadeIn>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 w-full mt-4">
@@ -216,26 +183,20 @@ export default function Home() {
 
         {/* CTA Section */}
         <div className="flex flex-col items-center text-center gap-4 max-w-3xl">
-          <FadeIn
-            delay={0.2}
-            initialX={-20}
-            className="text-3xl md:text-5xl text-surface-900 font-bold leading-tight"
-          >
-            Ready To Build a Solid Digital Foundation?
+          <FadeIn delay={0.2} initialX={-20}>
+            <h2 className="text-3xl md:text-5xl text-surface-900 font-bold leading-tight">
+              Ready to Build a Solid Digital Foundation?
+            </h2>
           </FadeIn>
-          <FadeIn
-            delay={0.4}
-            initialX={20}
-            className="text-surface-600 text-sm md:text-base leading-relaxed mt-2"
-          >
-            {
-              "Get a free 30-minute consultation. Let's discuss your current situation and goals, and we will provide tailored technical advice for your business."
-            }
+          <FadeIn delay={0.4} initialX={20}>
+            <p className="text-surface-600 text-sm md:text-base leading-relaxed mt-2">
+              {
+                "Get a free 30-minute consultation. Let's discuss your current situation and goals, and we will provide tailored technical advice for your business."
+              }
+            </p>
           </FadeIn>
           <FadeIn delay={0.6} initialX={-20}>
-            <button className="text-surface-50 mt-6 w-fit text-center px-8 py-3 rounded-full cursor-pointer hover:bg-brand-700 bg-brand-600 font-bold transition-all duration-300 hover:scale-105 shadow-lg shadow-brand-600/20">
-              Reserve Consultation
-            </button>
+            <ConsultationButton text="Reserve Consultation" />
           </FadeIn>
         </div>
       </section>

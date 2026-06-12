@@ -65,7 +65,7 @@ export default function Footer() {
         </FadeIn>
         <FadeIn delay={0.6} initialY={20}>
           <div className="mt-4 font-medium">
-            Monday - Sunday • 08:00 - 20:00
+            Monday - Sunday • 09:00 - 18:00
           </div>
         </FadeIn>
       </div>

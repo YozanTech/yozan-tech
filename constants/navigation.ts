@@ -1,4 +1,4 @@
-import { Home, Coins, Cpu, Info } from "lucide-react";
+import { Home, Cpu, Info } from "lucide-react";
 
 export const NAVIGATION = [
   {
@@ -6,12 +6,6 @@ export const NAVIGATION = [
     label: "Home",
     href: "/",
     icon: Home,
-  },
-  {
-    id: "price",
-    label: "Price",
-    href: "/price",
-    icon: Coins,
   },
   {
     id: "services",

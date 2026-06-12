@@ -3,6 +3,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { NAVIGATION } from "@/constants/navigation";
 import FadeIn from "./FadeIn";
+import ConsultationButton from "./ConsultationButton";
 
 export default function Header() {
   const pathname = usePathname();
@@ -42,9 +43,7 @@ export default function Header() {
           );
         })}
         <FadeIn delay={0.2} initialY={-20}>
-          <button className="md:text-sm text-[10px] ml-1 cursor-pointer hover:bg-brand-700 bg-brand-600 shadow-md text-surface-50 px-4 py-2 rounded-full transition-all duration-300 font-semibold hover:scale-105">
-            Reserve Consultation
-          </button>
+          <ConsultationButton text="Reserve Consultation" variant="header" />
         </FadeIn>
       </nav>
     </header>

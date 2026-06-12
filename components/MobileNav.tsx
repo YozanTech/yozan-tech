@@ -1,7 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Home, Coins, Cpu, Info } from "lucide-react";
 import { NAVIGATION } from "@/constants/navigation";
 
 
