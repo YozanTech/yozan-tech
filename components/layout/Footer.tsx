@@ -1,5 +1,5 @@
 import Link from "next/link";
-import FadeIn from "./FadeIn";
+import FadeIn from "../FadeIn";
 import { NAVIGATION } from "@/constants/navigation";
 
 export default function Footer() {

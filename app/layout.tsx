@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Sans_TC, Noto_Serif_TC } from "next/font/google";
-import Header from "@/components/Header";
+import Header from "@/components/layout/Header";
 import "./globals.css";
-import MobileNav from "@/components/MobileNav";
-import Footer from "@/components/Footer";
+import MobileNav from "@/components/layout/MobileNav";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({
   variable: "--font-inter",

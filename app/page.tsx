@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { SERVICES } from "@/constants/service";
 import FadeIn from "@/components/FadeIn";
-import ConsultationButton from "@/components/ConsultationButton";
+import ConsultationButton from "@/components/ui/ConsultationButton";
 
 const yozanValues = [
   {
@@ -81,7 +81,10 @@ export default function Home() {
               </button>
             </FadeIn>
             <FadeIn delay={1.0} initialX={-20}>
-              <ConsultationButton text="Reserve a Free Consultation" variant="outline" />
+              <ConsultationButton
+                text="Reserve a Free Consultation"
+                variant="outline"
+              />
             </FadeIn>
           </div>
         </div>

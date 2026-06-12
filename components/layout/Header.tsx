@@ -2,8 +2,8 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { NAVIGATION } from "@/constants/navigation";
-import FadeIn from "./FadeIn";
-import ConsultationButton from "./ConsultationButton";
+import FadeIn from "../FadeIn";
+import ConsultationButton from "../ui/ConsultationButton";
 
 export default function Header() {
   const pathname = usePathname();

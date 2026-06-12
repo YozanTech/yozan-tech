@@ -1,5 +1,5 @@
 import FadeIn from "@/components/FadeIn";
-import ConsultationButton from "@/components/ConsultationButton";
+import ConsultationButton from "@/components/ui/ConsultationButton";
 import { SERVICES } from "@/constants/service";
 import { Check } from "lucide-react";
 
