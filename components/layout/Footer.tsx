@@ -1,8 +1,12 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import FadeIn from "../FadeIn";
 import { NAVIGATION } from "@/constants/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const tNav = useTranslations("navigation");
+  const tFooter = useTranslations("footer");
+
   return (
     <footer className="w-full flex flex-col md:flex-row items-start justify-between px-6 md:px-16 py-8 text-surface-600 text-sm min-h-52 gap-10 md:gap-16 bg-surface-100/50">
       <div className="flex flex-col gap-4 h-full w-full flex-2">
@@ -17,8 +21,7 @@ export default function Footer() {
           </span>
         </FadeIn>
         <FadeIn delay={0.4} initialY={20} className="text-surface-600 max-w-md">
-          Designed for SMEs and startups, providing a modern, long-term
-          maintainable digital infrastructure.
+          {tFooter("description")}
         </FadeIn>
         <FadeIn delay={0.6} initialY={20} className="mt-auto font-medium">
           © {new Date().getFullYear()} Yozan Tech. All rights reserved.
@@ -31,7 +34,7 @@ export default function Footer() {
           initialY={20}
           className="text-surface-900 font-semibold text-lg"
         >
-          Guide
+          {tFooter("guide")}
         </FadeIn>
         <div className="flex flex-col gap-2">
           {NAVIGATION.map((item, index) => (
@@ -40,7 +43,7 @@ export default function Footer() {
                 href={item.href}
                 className="text-surface-600 group relative w-fit"
               >
-                {item.label}
+                {tNav(item.id)}
                 <span className="absolute bottom-0 left-0 h-px w-0 bg-surface-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </FadeIn>
@@ -53,7 +56,7 @@ export default function Footer() {
           initialY={20}
           className="text-surface-900 font-semibold text-lg"
         >
-          Contact Us
+          {tFooter("contactUs")}
         </FadeIn>
         <FadeIn delay={0.4} initialY={20}>
           <Link
@@ -65,7 +68,7 @@ export default function Footer() {
         </FadeIn>
         <FadeIn delay={0.6} initialY={20}>
           <div className="mt-4 font-medium">
-            Monday - Sunday • 09:00 - 18:00
+            {tFooter("businessHours")}
           </div>
         </FadeIn>
       </div>

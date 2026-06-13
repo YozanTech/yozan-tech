@@ -2,6 +2,7 @@ import { BriefcaseBusiness, Globe, Cloud } from "lucide-react";
 
 export const SERVICES = [
   {
+    id: "customBusinessSystem",
     label: "Custom Business Systems",
     icon: BriefcaseBusiness,
     description:
@@ -19,6 +20,7 @@ export const SERVICES = [
     },
   },
   {
+    id: "premiumCorporateWebsite",
     label: "Premium Corporate Websites",
     icon: Globe,
     description:
@@ -36,6 +38,7 @@ export const SERVICES = [
     },
   },
   {
+    id: "maintenanceAndCloudManagement",
     label: "Maintenance & Cloud Management",
     icon: Cloud,
     description:

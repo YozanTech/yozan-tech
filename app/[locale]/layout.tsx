@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Sans_TC, Noto_Serif_TC } from "next/font/google";
 import Header from "@/components/layout/Header";
-import "./globals.css";
+import "../globals.css";
 import MobileNav from "@/components/layout/MobileNav";
 import Footer from "@/components/layout/Footer";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import ContactForm from "@/components/ui/ConsultationForm";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -48,23 +51,29 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  const messages = await getMessages();
+  
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${inter.variable} ${notoSansTC.variable} ${notoSerifTC.variable} flex flex-col h-full antialiased`}
     >
       <body className="relative flex flex-col selection:bg-brand-400 selection:text-surface-50">
-        <Header />
-        <main className="flex flex-col flex-1 w-full">
-          {children}
-        </main>
-        <MobileNav />
-        <Footer />
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          <main className="flex flex-col flex-1 w-full">{children}</main>
+          <MobileNav />
+          <Footer />
+          <ContactForm />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

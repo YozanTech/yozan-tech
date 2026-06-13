@@ -1,0 +1,142 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "consultation": "Reserve Consultation"
+  },
+  "consultationBtn": {
+    "disabled": "Closed",
+    "disabledTitle": "Closed outside business hours",
+    "operatingHours": "Operating Hours: 9AM - 6PM"
+  },
+  "home": {
+    "badge": "Technology Partners Built For SME",
+    "title1": "Modernizing the",
+    "title2": "Digital Foundation",
+    "title3": "for SMEs.",
+    "description": "躍棧 (Yozan Tech) provides tailor-made systems, premium websites, and managed cloud services. From the very first line of code to daily maintenance, we are with you for the long haul.",
+    "heroBtn1": "Learn About Our Services",
+    "heroBtn2": "Reserve a Free Consultation",
+    "services": "Services",
+    "serviceTitle": "3 Main Things We Do",
+    "serviceDescription": "We do not pursue large-scale and comprehensive development, but focus on the basic infrastructure that small and medium-sized enterprises truly need.",
+    "whyYozan": "Why Yozan Tech",
+    "whyYozanTitle": "Why Choose Yozan Tech?",
+    "ctaTitle": "Ready to Build a Solid Digital Foundation?",
+    "ctaDescription": "Get a free 30-minute consultation. Let's discuss your current situation and goals, and we will provide tailored technical advice for your business.",
+    "ctaBtn": "Reserve Consultation",
+    "values": {
+      "flexiblePricing": {
+        "label": "Flexible Pricing",
+        "description": "Deliver in phases according to your budget and priorities, eliminating the need for a massive upfront investment."
+      },
+      "longTermMaintenance": {
+        "label": "Long-Term Maintenance",
+        "description": "From the very first line of code to daily maintenance, we are with you for the long haul."
+      },
+      "cloudNative": {
+        "label": "Cloud-Native",
+        "description": "Built on modern, scalable infrastructure ensuring your applications remain fast, secure, and highly available at all times."
+      },
+      "directCommunication": {
+        "label": "Direct Communication",
+        "description": "Communicate directly with the expert developers building your product, ensuring no requirements are lost through a middleman."
+      }
+    }
+  },
+  "services": {
+    "service": "Services",
+    "title1": "From One-Line Code",
+    "title2": "to Daily Maintenance",
+    "description": "躍棧 (Yozan Tech) focuses on three service lines, each designed to enable SME to access IT capabilities that were previously only affordable for large companies, at a reasonable cost.",
+    "serviceCount": "Service 0{index}",
+    "ctaTitle": "Unsure Which Option Is the Right Fit for Your Business?",
+    "ctaDescription": "Tell us about your current situation and goals, and we will help you determine where to start investing.",
+    "ctaBtn": "Talk About Your Needs",
+    "items": {
+      "customBusinessSystem": {
+        "label": "Custom Business Systems",
+        "description": "From internal workflows to automated operations. We build tailored ERPs, CRMs, and dashboards that perfectly fit your unique business logic, eliminating the friction of rigid off-the-shelf software.",
+        "shortDescription": "Integrate the processes scattered across Excel, Line groups, and paper documents into a system that truly belongs to you.",
+        "serviceDetail": {
+          "1": "Internal ERP / CRM / Order Management System",
+          "2": "Business process automation and auditing mechanisms",
+          "3": "Back-end dashboards and reports",
+          "4": "Third-party service integration (financial payments, logistics, accounting)"
+        }
+      },
+      "premiumCorporateWebsite": {
+        "label": "Premium Corporate Websites",
+        "description": "From high-converting landing pages to robust e-commerce platforms. We craft lightning-fast, SEO-optimized, and visually stunning digital storefronts that elevate your brand and drive actual business growth.",
+        "shortDescription": "From brand positioning and copywriting structure to visual design, create websites that truly generate inquiries and conversions.",
+        "serviceDetail": {
+          "1": "Brand website design and development.",
+          "2": "Event / Product Landing Page",
+          "3": "SEO and performance optimization",
+          "4": "CMS integration, allowing marketing to update content independently"
+        }
+      },
+      "maintenanceAndCloudManagement": {
+        "label": "Maintenance & Cloud Management",
+        "description": "Ensuring high availability, bulletproof security, and smooth daily operations. We handle the servers, continuous deployments, and technical monitoring, so you can sleep well and focus entirely on your business.",
+        "shortDescription": "Going live is just the beginning. We offer long-term maintenance and cloud hosting, so you don't have to build your own IT team.",
+        "serviceDetail": {
+          "1": "Cloud Infrastructure Design & Strategy (AWS, GCP, Cloudflare)",
+          "2": "System Monitoring, Data Backup & Disaster Recovery Solutions",
+          "3": "Performance Tuning, Scalability Enhancement & Cost Optimization",
+          "4": "Monthly Operations Reports, Infrastructure Reviews & Technical Advisory"
+        }
+      }
+    }
+  },
+  "about": {
+    "heroTag": "Our Vision",
+    "heroTitle1": "Leading You Forward",
+    "heroTitle2": "with a Solid Technical Foundation",
+    "heroDescription": "The name \"Yozan (躍棧)\" embodies \"Leading Forward (躍)\" and \"Technology Stack (棧)\". We believe that the ambition of SMEs should never be bottlenecked by expensive, cumbersome, or rigid IT infrastructure.",
+    "storyTag": "Our Story",
+    "storyTitle": "Bridging the Technology Gap",
+    "storyP1": "Yozan Tech was founded on a simple premise: SMEs deserve the same high-quality technical foundation as large enterprises. For too long, we've watched small businesses struggle with fragmented tools, exorbitant agency fees, and unmaintainable code.",
+    "storyP2": "We exist to change that. We offer long-term technology partnerships—acting as your dedicated in-house engineering team. We don't just deliver a project and walk away; we stay by your side to ensure your digital infrastructure evolves seamlessly as your business scales.",
+    "principleTag": "Our Principles",
+    "principleTitle": "What We Believe In",
+    "ctaTitle": "Let's Build Something Great Together",
+    "ctaDescription": "We'd love to hear your story. Let's grab a coffee and explore how the right technology can accelerate your growth.",
+    "ctaBtn": "Schedule a Chat",
+    "principles": {
+      "companionship": {
+        "title": "Partnership Over Handoffs",
+        "description": "Going live is just the beginning. We treat every engagement as a long-term alliance, not a one-off transaction. Your success is our ongoing responsibility."
+      },
+      "simplicity": {
+        "title": "Substance Over Buzzwords",
+        "description": "The best systems are imperceptible. We architect elegant, perfectly-fitted solutions rather than piling on unnecessary technical jargon or trendy frameworks."
+      },
+      "honesty": {
+        "title": "Radical Transparency",
+        "description": "We will tell you exactly what you don't need. If a feature exceeds your budget without strong ROI, we'll advise against it. We refuse to overpromise just to close a deal."
+      }
+    }
+  },
+  "footer": {
+    "description": "Designed for SMEs and startups, providing a modern, long-term maintainable digital infrastructure.",
+    "guide": "Guide",
+    "contactUs": "Contact Us",
+    "businessHours": "Monday - Sunday • 09:00 - 18:00"
+  },
+  "consultationForm": {
+    "title": "Reserve a Consultation",
+    "description": "Please fill in the details below, and we will get back to you shortly.",
+    "namePlaceholder": "How Shall We Address You?",
+    "contactPlaceholder": "How Shall We Contact You?",
+    "messagePlaceholder": "What Are Your Thoughts?",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "successTitle": "Sent Successfully!",
+    "successMessage": "We will get back to you shortly.",
+    "closingIn": "Closing in",
+    "close": "Close",
+    "errorMessage": "Application Sent Failed! Please Try Again Later."
+  }
+}

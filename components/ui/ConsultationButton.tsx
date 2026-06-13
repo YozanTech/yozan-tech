@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useModalStore } from "@/store/useModalStore";
 
 // Check if current time is within Malaysia business hours
 function checkIsBusinessHours() {
@@ -25,11 +27,16 @@ function checkIsBusinessHours() {
 }
 
 interface ConsultationButtonProps {
-  text: string;
   variant?: "default" | "header" | "outline";
+  text: string;
 }
 
-export default function ConsultationButton({ text, variant = "default" }: ConsultationButtonProps) {
+export default function ConsultationButton({
+  variant = "default",
+  text,
+}: ConsultationButtonProps) {
+  const t = useTranslations("consultationBtn");
+  const { onOpen } = useModalStore();
   const [isBusinessHours, setIsBusinessHours] = useState<boolean>(true);
   const [mounted, setMounted] = useState(false);
 
@@ -57,39 +64,49 @@ export default function ConsultationButton({ text, variant = "default" }: Consul
 
   let baseClasses = "";
   if (isHeader) {
-    baseClasses = "md:text-sm text-[10px] ml-1 px-4 py-2 rounded-full font-semibold transition-all duration-300 text-surface-50";
+    baseClasses =
+      "md:text-sm text-[10px] ml-1 px-4 py-2 rounded-full font-semibold transition-all duration-300 text-surface-50";
   } else if (isOutline) {
-    baseClasses = "w-full md:w-auto text-center border border-surface-300 px-5 py-3 rounded-full font-bold transition-all duration-300";
+    baseClasses =
+      "w-full md:w-auto text-center border border-surface-300 px-5 py-3 rounded-full font-bold transition-all duration-300";
   } else {
-    baseClasses = "group flex items-center gap-4 mt-8 w-fit text-center px-8 py-3 rounded-full font-bold transition-all duration-300 text-surface-50";
+    baseClasses =
+      "group flex items-center gap-4 mt-8 w-fit text-center px-8 py-3 rounded-full font-bold transition-all duration-300 text-surface-50";
   }
 
   let activeClasses = "";
   if (isHeader) {
-    activeClasses = "bg-brand-600 hover:bg-brand-700 shadow-md cursor-pointer hover:scale-105";
+    activeClasses =
+      "bg-brand-600 hover:bg-brand-700 shadow-md cursor-pointer hover:scale-105";
   } else if (isOutline) {
-    activeClasses = "text-surface-600 hover:bg-surface-100 cursor-pointer hover:scale-105";
+    activeClasses =
+      "text-surface-600 hover:bg-surface-100 cursor-pointer hover:scale-105";
   } else {
-    activeClasses = "bg-brand-600 hover:bg-brand-700 shadow-lg shadow-brand-600/20 cursor-pointer hover:scale-105";
+    activeClasses =
+      "bg-brand-600 hover:bg-brand-700 shadow-lg shadow-brand-600/20 cursor-pointer hover:scale-105";
   }
 
-  const disabledClasses = "bg-surface-400 text-surface-50 cursor-not-allowed opacity-80 border-transparent";
+  const disabledClasses =
+    "bg-surface-400 text-surface-50 cursor-not-allowed opacity-80 border-transparent";
 
-  const disabledText = isHeader ? "Closed" : "Closed (Operating Hours: 9AM - 6PM)";
+  const disabledText = isHeader
+    ? t("disabledTitle")
+    : `${t("disabled")} (${t("operatingHours")})`;
 
   return (
-    <button
-      className={`text-sm ${baseClasses} ${disabled ? disabledClasses : activeClasses}`}
-      disabled={disabled}
-      title={disabled ? "Closed outside business hours" : ""}
-    >
-      {disabled ? disabledText : text}
-      {!disabled && variant === "default" && (
-        <ArrowRight
-          size={20}
-          className="group-hover:translate-x-1 transition-all duration-300"
-        />
-      )}
-    </button>
+      <button
+        className={`text-sm ${baseClasses} ${disabled ? disabledClasses : activeClasses}`}
+        disabled={disabled}
+        title={disabled ? t("disabledTitle") : ""}
+        onClick={onOpen}
+      >
+        {disabled ? disabledText : text}
+        {!disabled && variant === "default" && (
+          <ArrowRight
+            size={20}
+            className="group-hover:translate-x-1 transition-all duration-300"
+          />
+        )}
+      </button>
   );
 }

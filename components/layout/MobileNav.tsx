@@ -1,6 +1,5 @@
 "use client";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { usePathname, Link } from "@/i18n/routing";
 import { NAVIGATION } from "@/constants/navigation";
 
 
@@ -17,7 +16,7 @@ export default function MobileNav() {
           <Link
             key={item.id}
             href={item.href}
-            aria-label={item.label}
+            aria-label={item.id}
             className={`relative flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 ${
               isActive
                 ? "bg-brand-50 text-brand-600"

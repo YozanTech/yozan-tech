@@ -2,13 +2,16 @@ import FadeIn from "@/components/FadeIn";
 import ConsultationButton from "@/components/ui/ConsultationButton";
 import { SERVICES } from "@/constants/service";
 import { Check } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = {
   title: "Services",
   description: "The service that provides by Yozan Tech",
 };
 
-export default function ServicePage() {
+export default async function ServicePage() {
+  const t = await getTranslations("services");
+
   return (
     <div className="flex flex-col flex-1">
       {/* Hero Section */}
@@ -19,12 +22,12 @@ export default function ServicePage() {
             initialX={-20}
             className="text-brand-600 font-bold tracking-widest text-xs md:text-sm uppercase"
           >
-            SERVICES
+            {t("service")}
           </FadeIn>
           <FadeIn delay={0.4} initialX={-20}>
             <h1 className="font-bold text-3xl text-center md:text-left md:text-5xl flex flex-col gap-2 text-surface-900">
-              <span>From One-Line Code</span>
-              <span>to Daily Maintenance</span>
+              <span>{t("title1")}</span>
+              <span>{t("title2")}</span>
             </h1>
           </FadeIn>
           <FadeIn
@@ -32,9 +35,7 @@ export default function ServicePage() {
             initialX={-20}
             className="mt-5 flex text-sm md:text-base text-center md:text-left items-center text-surface-800 w-full leading-relaxed md:max-w-[50%]"
           >
-            躍棧 (Yozan Tech) focuses on three service lines, each designed to
-            enable SME to access IT capabilities that were previously only
-            affordable for large companies, at a reasonable cost.
+            {t("description")}
           </FadeIn>
         </div>
       </section>
@@ -43,11 +44,9 @@ export default function ServicePage() {
       {SERVICES.map((service, index) => (
         <section
           key={index}
-          className={`group flex flex-col md:flex-row w-full items-center justify-center p-6 md:p-24 gap-12 md:gap-24  ${index % 2 === 0 ? "bg-surface-50" : "bg-transparent"} ${index === 2 ? "" : "border-b border-surface-200/80"}`}
+          className={`group flex flex-col md:flex-row w-full items-center justify-center p-6 md:p-24 gap-12 md:gap-24 ${index % 2 === 0 ? "bg-surface-50" : "bg-transparent"} ${index === 2 ? "" : "border-b border-surface-200/80"}`}
         >
-          <FadeIn
-            delay={0.2}
-            initialX={-20}
+          <div
             className={`flex flex-col gap-8 md:gap-16 w-full ${index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"}`}
           >
             <div className="flex flex-col flex-1 gap-2.5">
@@ -58,22 +57,22 @@ export default function ServicePage() {
               </FadeIn>
               <FadeIn delay={0.4} initialX={-20}>
                 <div className="text-brand-600 uppercase font-medium">
-                  Service 0{index + 1}
+                  {t(`serviceCount`, { index: index + 1 })}
                 </div>
               </FadeIn>
 
               <FadeIn delay={0.6} initialX={-20}>
                 <h2 className="text-2xl md:text-3xl font-bold text-surface-900">
-                  {service.label}
+                  {t(`items.${service.id}.label`)}
                 </h2>
               </FadeIn>
               <FadeIn delay={0.8} initialX={-20}>
                 <p className="text-brand-600 font-medium text-sm md:text-base">
-                  {service.shortDescription}
+                  {t(`items.${service.id}.shortDescription`)}
                 </p>
               </FadeIn>
               <FadeIn delay={1.0} initialX={-20}>
-                <p className="text-surface-600">{service.description}</p>
+                <p className="text-surface-600">{t(`items.${service.id}.description`)}</p>
               </FadeIn>
             </div>
             <div className="flex flex-col gap-8 flex-1">
@@ -83,14 +82,14 @@ export default function ServicePage() {
                     <div className="flex items-center gap-4 bg-[#fffdf8] p-4 px-6 border-surface-200 border rounded-2xl shadow-xs hover:shadow-md hover:-translate-y-1 hover:border-surface-300 transition-all duration-300 cursor-default">
                       <Check className="text-brand-600" size={16} />
                       <p className="text-surface-600 text-sm">
-                        {serviceDetail.label}
+                        {t(`items.${service.id}.serviceDetail.${idx + 1}`)}
                       </p>
                     </div>
                   </FadeIn>
                 ),
               )}
             </div>
-          </FadeIn>
+          </div>
         </section>
       ))}
       <div className="w-full h-px bg-radial from-surface-200 via-surface-100 to-transparent"></div>
@@ -102,18 +101,17 @@ export default function ServicePage() {
           initialX={20}
           className="max-w-3xl text-3xl md:text-5xl text-surface-900 font-bold leading-tight"
         >
-          Unsure Which Option Is the Right Fit for Your Business?
+          {t("ctaTitle")}
         </FadeIn>
         <FadeIn
           delay={0.4}
           initialX={-20}
           className="max-w-3xl text-surface-600 text-sm md:text-base leading-relaxed mt-2"
         >
-          Tell us about your current situation and goals, and we will help you
-          determine where to start investing.
+          {t("ctaDescription")}
         </FadeIn>
         <FadeIn delay={0.6} initialX={20}>
-          <ConsultationButton text="Talk About Your Needs" />
+          <ConsultationButton text={t("ctaBtn")} />
         </FadeIn>
       </section>
     </div>

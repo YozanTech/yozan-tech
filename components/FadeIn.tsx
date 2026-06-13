@@ -1,6 +1,14 @@
 "use client";
-import { motion } from "framer-motion";
+import { HTMLMotionProps, motion } from "framer-motion";
 import { ReactNode } from "react";
+
+interface FadeInProps extends HTMLMotionProps<"div"> {
+  children: ReactNode;
+  delay?: number;
+  initialX?: number;
+  initialY?: number;
+  className?: string;
+}
 
 export default function FadeIn({
   children,
@@ -8,13 +16,8 @@ export default function FadeIn({
   initialX = 0,
   initialY = 0,
   className = "",
-}: {
-  children: ReactNode;
-  delay?: number;
-  initialX?: number;
-  initialY?: number;
-  className?: string;
-}) {
+  ...props
+}: FadeInProps) {
   // If it's the header or footer, we don't want a negative margin because 
   // elements at the very top or bottom edge might never trigger it.
   return (
@@ -24,6 +27,7 @@ export default function FadeIn({
       viewport={{ once: true, margin: "0px" }}
       transition={{ duration: 0.6, delay }}
       className={className}
+      {...props}
     >
       {children}
     </motion.div>

@@ -1,11 +1,12 @@
 "use client";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { usePathname, Link } from "@/i18n/routing";
 import { NAVIGATION } from "@/constants/navigation";
 import FadeIn from "../FadeIn";
 import ConsultationButton from "../ui/ConsultationButton";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
+  const t = useTranslations("navigation");
   const pathname = usePathname();
 
   return (
@@ -34,7 +35,7 @@ export default function Header() {
                 href={item.href}
                 className={`group py-1 relative hidden md:flex text-surface-800 ${isActive ? "font-medium" : ""}`}
               >
-                {item.label}
+                {t(item.id)}
                 <span
                   className={`absolute bottom-0 left-0 h-px w-0 bg-surface-600 transition-all duration-300 group-hover:w-full`}
                 ></span>
@@ -43,7 +44,7 @@ export default function Header() {
           );
         })}
         <FadeIn delay={0.2} initialY={-20}>
-          <ConsultationButton text="Reserve Consultation" variant="header" />
+          <ConsultationButton text={t("consultation")} variant="header" />
         </FadeIn>
       </nav>
     </header>

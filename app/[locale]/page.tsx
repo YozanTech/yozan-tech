@@ -9,35 +9,32 @@ import {
 import { SERVICES } from "@/constants/service";
 import FadeIn from "@/components/FadeIn";
 import ConsultationButton from "@/components/ui/ConsultationButton";
+import { getTranslations } from "next-intl/server";
+import HeroGraphic from "@/components/ui/HeroGraphic";
 
 const yozanValues = [
   {
-    label: "Flexible Pricing",
+    id: "flexiblePricing",
     icon: Handshake,
-    description:
-      "Deliver in phases according to your budget and priorities, eliminating the need for a massive upfront investment.",
   },
   {
-    label: "Long-Term Maintenance",
+    id: "longTermMaintenance",
     icon: Wrench,
-    description:
-      "From the very first line of code to daily maintenance, we are with you for the long haul.",
   },
   {
-    label: "Cloud-Native",
+    id: "cloudNative",
     icon: Cloud,
-    description:
-      "Built on modern, scalable infrastructure ensuring your applications remain fast, secure, and highly available at all times.",
   },
   {
-    label: "Direct Communication",
+    id: "directCommunication",
     icon: MessagesSquare,
-    description:
-      "Communicate directly with the expert developers building your product, ensuring no requirements are lost through a middleman.",
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const t = await getTranslations("home");
+  const tService = await getTranslations("services");
+
   return (
     <div className="flex flex-col flex-1">
       {/* Hero Section */}
@@ -49,31 +46,29 @@ export default function Home() {
             className="text-surface-600 text-xs flex items-center gap-2 p-2 bg-surface-100 w-fit rounded-full px-4 py-1.5 border-surface-500 border"
           >
             <Sparkles size={12} className="text-brand-600" />
-            Technology Partners Built For SME
+            {t("badge")}
           </FadeIn>
           <FadeIn delay={0.4} initialX={-20}>
             <h1 className="font-bold text-3xl text-center md:text-left md:text-5xl flex flex-col gap-2">
-              <span>Modernizing the</span>
+              <span>{t("title1")}</span>
               <div className="flex flex-wrap items-center gap-2 justify-center md:justify-start">
                 <span className="text-brand-500 text-nowrap">
-                  Digital Foundation
+                  {t("title2")}
                 </span>
-                <span className="text-nowrap">for SMEs.</span>
+                <span className="text-nowrap">{t("title3")}</span>
               </div>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.6} initialX={-20}>
             <p className="flex text-sm md:text-base text-center md:text-left items-center text-surface-800 w-full">
-              躍棧 (Yozan Tech) provides tailor-made systems, premium websites,
-              and managed cloud services. From the very first line of code to
-              daily maintenance, we are with you for the long haul.
+              {t("description")}
             </p>
           </FadeIn>
           <div className="flex flex-col md:flex-row text-sm md:text-base  items-start md:items-center gap-4 lg:gap-6 mt-2">
             <FadeIn delay={0.8} initialX={-20}>
               <button className="text-sm flex w-full md:w-auto items-center hover:scale-105 justify-center gap-2.5 bg-brand-600 text-surface-50 px-5 py-3 rounded-full cursor-pointer font-bold transition-all hover:bg-brand-700 duration-300 group">
-                Learn About Our Services
+                {t("heroBtn1")}
                 <ArrowRight
                   size={16}
                   className="group-hover:translate-x-1 transition-all duration-300"
@@ -81,10 +76,7 @@ export default function Home() {
               </button>
             </FadeIn>
             <FadeIn delay={1.0} initialX={-20}>
-              <ConsultationButton
-                text="Reserve a Free Consultation"
-                variant="outline"
-              />
+              <ConsultationButton text={t("heroBtn2")} variant="outline" />
             </FadeIn>
           </div>
         </div>
@@ -92,9 +84,9 @@ export default function Home() {
         <FadeIn
           delay={0.8}
           initialX={20}
-          className="hidden lg:flex flex-1 w-full rounded-2xl items-center justify-center font-bold text-surface-800 border-dashed h-64 lg:h-full border-surface-500 border bg-surface-200 shadow-inner"
+          className="hidden lg:flex flex-1 w-full items-center justify-center relative"
         >
-          Image Placeholder
+          <HeroGraphic />
         </FadeIn>
       </section>
 
@@ -106,18 +98,16 @@ export default function Home() {
             initialX={-20}
             className="text-brand-600 font-bold tracking-widest text-xs md:text-sm uppercase"
           >
-            SERVICES
+            {t("services")}
           </FadeIn>
           <FadeIn delay={0.4} initialX={-20}>
             <h2 className="text-3xl md:text-4xl text-surface-900 font-bold">
-              3 Main Things We Do
+              {t("serviceTitle")}
             </h2>
           </FadeIn>
           <FadeIn delay={0.6} initialX={-20}>
             <p className="mt-2 text-surface-600 text-sm md:text-base max-w-full md:max-w-2xl leading-relaxed">
-              We do not pursue large-scale and comprehensive development, but
-              focus on the basic infrastructure that small and medium-sized
-              enterprises truly need.
+              {t("serviceDescription")}
             </p>
           </FadeIn>
         </div>
@@ -133,10 +123,10 @@ export default function Home() {
                 <service.icon size={20} />
               </div>
               <h3 className="text-surface-900 font-bold text-xl mb-1 mt-2">
-                {service.label}
+                {tService(`items.${service.id}.label`)}
               </h3>
               <p className="text-surface-600 text-sm leading-relaxed">
-                {service.shortDescription}
+                {tService(`items.${service.id}.shortDescription`)}
               </p>
             </FadeIn>
           ))}
@@ -151,11 +141,11 @@ export default function Home() {
             initialX={-20}
             className="text-brand-600 font-bold tracking-widest text-xs md:text-sm uppercase"
           >
-            WHY YOZAN TECH
+            {t("whyYozan")}
           </FadeIn>
           <FadeIn delay={0.4} initialX={-20}>
             <h2 className="text-3xl md:text-4xl text-surface-900 font-bold">
-              Why Choose Yozan Tech?
+              {t("whyYozanTitle")}
             </h2>
           </FadeIn>
         </div>
@@ -172,10 +162,10 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-1.5">
                 <h3 className="font-bold text-surface-900 text-lg">
-                  {value.label}
+                  {t(`values.${value.id}.label`)}
                 </h3>
                 <p className="text-surface-600 text-sm leading-relaxed">
-                  {value.description}
+                  {t(`values.${value.id}.description`)}
                 </p>
               </div>
             </FadeIn>
@@ -188,18 +178,16 @@ export default function Home() {
         <div className="flex flex-col items-center text-center gap-4 max-w-3xl">
           <FadeIn delay={0.2} initialX={-20}>
             <h2 className="text-3xl md:text-5xl text-surface-900 font-bold leading-tight">
-              Ready to Build a Solid Digital Foundation?
+              {t("ctaTitle")}
             </h2>
           </FadeIn>
           <FadeIn delay={0.4} initialX={20}>
             <p className="text-surface-600 text-sm md:text-base leading-relaxed mt-2">
-              {
-                "Get a free 30-minute consultation. Let's discuss your current situation and goals, and we will provide tailored technical advice for your business."
-              }
+              {t("ctaDescription")}
             </p>
           </FadeIn>
           <FadeIn delay={0.6} initialX={-20}>
-            <ConsultationButton text="Reserve Consultation" />
+            <ConsultationButton text={t("ctaBtn")} />
           </FadeIn>
         </div>
       </section>
