@@ -87,7 +87,7 @@ export default function ConsultationButton({
   }
 
   const disabledClasses =
-    "bg-surface-400 text-surface-50 cursor-not-allowed opacity-80 border-transparent";
+    "text-xs md:text-sm bg-surface-400 text-surface-50 cursor-not-allowed opacity-80 border-transparent";
 
   const disabledText = isHeader
     ? t("disabled")
@@ -95,7 +95,7 @@ export default function ConsultationButton({
 
   return (
       <button
-        className={`text-sm ${baseClasses} ${disabled ? disabledClasses : activeClasses}`}
+        className={`${baseClasses} ${disabled ? disabledClasses : activeClasses}`}
         disabled={disabled}
         title={disabled ? t("disabledTitle") : ""}
         onClick={onOpen}

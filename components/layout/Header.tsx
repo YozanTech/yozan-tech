@@ -28,7 +28,7 @@ export default function Header() {
           return (
             <FadeIn
               key={item.id}
-              delay={0.4 + (NAVIGATION.length - 1 - index) * 0.2}
+              delay={0.3 + (NAVIGATION.length - 1 - index) * 0.1}
               initialY={-20}
             >
               <Link

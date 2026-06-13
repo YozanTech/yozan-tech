@@ -1,144 +1,144 @@
 {
   "navigation": {
-    "home": "Home",
-    "services": "Services",
-    "about": "About",
-    "consultation": "Reserve Consultation"
+    "home": "Laman Utama",
+    "services": "Perkhidmatan",
+    "about": "Tentang Kami",
+    "consultation": "Tempah Konsultasi"
   },
   "consultationBtn": {
-    "disabled": "Closed",
-    "disabledTitle": "Closed outside business hours",
-    "operatingHours": "Operating Hours: 9AM - 6PM"
+    "disabled": "Tutup",
+    "disabledTitle": "Tutup di luar waktu operasi",
+    "operatingHours": "Waktu Operasi: 9AM - 6PM"
   },
   "home": {
-    "badge": "Technology Partners Built For SME",
-    "title1": "Modernizing the",
-    "title2": "Digital Foundation",
-    "title3": "for SMEs.",
-    "description": "躍棧 (Yozan Tech) provides tailor-made systems, premium websites, and managed cloud services. From the very first line of code to daily maintenance, we are with you for the long haul.",
-    "heroBtn1": "Learn About Our Services",
-    "heroBtn2": "Reserve a Free Consultation",
-    "services": "Services",
-    "serviceTitle": "3 Main Things We Do",
-    "serviceDescription": "We do not pursue large-scale and comprehensive development, but focus on the basic infrastructure that small and medium-sized enterprises truly need.",
-    "whyYozan": "Why Yozan Tech",
-    "whyYozanTitle": "Why Choose Yozan Tech?",
-    "ctaTitle": "Ready to Build a Solid Digital Foundation?",
-    "ctaDescription": "Get a free 30-minute consultation. Let's discuss your current situation and goals, and we will provide tailored technical advice for your business.",
-    "ctaBtn": "Reserve Consultation",
+    "badge": "Rakan Teknologi Khas Untuk PKS",
+    "title1": "Memodenkan",
+    "title2": "Asas Digital",
+    "title3": "untuk PKS.",
+    "description": "Yozan Tech menyediakan sistem perniagaan tersuai, laman web korporat premium, dan perkhidmatan awan terurus. Dari baris kod pertama hingga penyelenggaraan harian, kami sedia mengiringi anda untuk jangka masa panjang.",
+    "heroBtn1": "Ketahui Perkhidmatan Kami",
+    "heroBtn2": "Tempah Konsultasi Percuma",
+    "services": "Perkhidmatan Teras",
+    "serviceTitle": "3 Teras Utama Kami",
+    "serviceDescription": "Kami tidak mengejar pembangunan berskala besar yang merumitkan, sebaliknya memberi tumpuan penuh kepada infrastruktur asas yang benar-benar diperlukan oleh Perusahaan Kecil dan Sederhana (PKS).",
+    "whyYozan": "Kenapa Yozan Tech",
+    "whyYozanTitle": "Mengapa Memilih Yozan Tech?",
+    "ctaTitle": "Bersedia Membina Asas Digital Yang Kukuh?",
+    "ctaDescription": "Dapatkan sesi konsultasi percuma selama 30 minit. Mari bincangkan situasi dan matlamat perniagaan anda, dan kami akan berikan khidmat nasihat teknikal yang khusus untuk anda.",
+    "ctaBtn": "Tempah Konsultasi",
     "values": {
       "flexiblePricing": {
-        "label": "Flexible Pricing",
-        "description": "Deliver in phases according to your budget and priorities, eliminating the need for a massive upfront investment."
+        "label": "Harga Fleksibel",
+        "description": "Penyerahan berfasa mengikut bajet dan keutamaan perniagaan anda, tanpa memerlukan pelaburan pendahuluan yang besar."
       },
       "longTermMaintenance": {
-        "label": "Long-Term Maintenance",
-        "description": "From the very first line of code to daily maintenance, we are with you for the long haul."
+        "label": "Penyelenggaraan Jangka Panjang",
+        "description": "Dari baris kod pertama hingga operasi harian, kami adalah tulang belakang teknikal anda yang boleh dipercayai."
       },
       "cloudNative": {
-        "label": "Cloud-Native",
-        "description": "Built on modern, scalable infrastructure ensuring your applications remain fast, secure, and highly available at all times."
+        "label": "Infrastruktur Awan (Cloud-Native)",
+        "description": "Dibina atas infrastruktur moden yang boleh diskala bagi memastikan aplikasi anda sentiasa pantas, selamat dan beroperasi tanpa gangguan."
       },
       "directCommunication": {
-        "label": "Direct Communication",
-        "description": "Communicate directly with the expert developers building your product, ensuring no requirements are lost through a middleman."
+        "label": "Komunikasi Terus",
+        "description": "Berhubung terus dengan jurutera pakar yang membina produk anda, memastikan tiada keciciran maklumat melalui orang tengah."
       }
     }
   },
   "services": {
-    "service": "Services",
-    "title1": "From One-Line Code",
-    "title2": "to Daily Maintenance",
-    "description": "躍棧 (Yozan Tech) focuses on three service lines, each designed to enable SME to access IT capabilities that were previously only affordable for large companies, at a reasonable cost.",
-    "serviceCount": "Service 0{index}",
-    "ctaTitle": "Unsure Which Option Is the Right Fit for Your Business?",
-    "ctaDescription": "Tell us about your current situation and goals, and we will help you determine where to start investing.",
-    "ctaBtn": "Talk About Your Needs",
+    "service": "Perkhidmatan Kami",
+    "title1": "Dari Baris Kod Pertama",
+    "title2": "Hingga Penyelenggaraan Harian",
+    "description": "Yozan Tech memfokuskan kepada tiga teras perkhidmatan. Kami komited membantu PKS mendapatkan keupayaan IT pada kos berpatutan, yang mana sebelum ini hanya mampu dimiliki oleh syarikat gergasi.",
+    "serviceCount": "Perkhidmatan 0{index}",
+    "ctaTitle": "Tidak Pasti Pilihan Mana Yang Sesuai Untuk Perniagaan Anda?",
+    "ctaDescription": "Kongsikan dengan kami situasi dan matlamat semasa anda, dan kami akan bantu anda tentukan titik permulaan pelaburan digital yang paling tepat.",
+    "ctaBtn": "Bincang Keperluan Anda",
     "items": {
       "customBusinessSystem": {
-        "label": "Custom Business Systems",
-        "description": "From internal workflows to automated operations. We build tailored ERPs, CRMs, and dashboards that perfectly fit your unique business logic, eliminating the friction of rigid off-the-shelf software.",
-        "shortDescription": "Integrate the processes scattered across Excel, Line groups, and paper documents into a system that truly belongs to you.",
+        "label": "Sistem Perniagaan Tersuai",
+        "description": "Dari aliran kerja dalaman hingga operasi automatik. Kami membina ERP, CRM, dan papan pemuka khusus yang padan dengan logik perniagaan anda, menghapuskan kerumitan perisian sedia ada yang tegar.",
+        "shortDescription": "Menyatukan proses kerja yang berselerak di dalam Excel, kumpulan WhatsApp, dan dokumen kertas ke dalam satu sistem yang benar-benar milik anda.",
         "serviceDetail": {
-          "1": "Internal ERP / CRM / Order Management System",
-          "2": "Business process automation and auditing mechanisms",
-          "3": "Back-end dashboards and reports",
-          "4": "Third-party service integration (financial payments, logistics, accounting)"
+          "1": "Pembangunan ERP / CRM / Sistem Pengurusan Pesanan Dalaman",
+          "2": "Automasi proses perniagaan dan mekanisme kelulusan",
+          "3": "Papan pemuka (Dashboard) data dan penjanaan laporan perniagaan",
+          "4": "Penyepaduan perkhidmatan pihak ketiga (Sistem bayaran, logistik, perisian perakaunan)"
         }
       },
       "premiumCorporateWebsite": {
-        "label": "Premium Corporate Websites",
-        "description": "From high-converting landing pages to robust e-commerce platforms. We craft lightning-fast, SEO-optimized, and visually stunning digital storefronts that elevate your brand and drive actual business growth.",
-        "shortDescription": "From brand positioning and copywriting structure to visual design, create websites that truly generate inquiries and conversions.",
+        "label": "Laman Web Korporat Premium",
+        "description": "Dari halaman pendaratan (landing page) berkonversi tinggi ke platform e-dagang yang mantap. Kami membina laman web yang pantas, mesra SEO, dan memukau bagi melonjakkan jenama anda serta memacu pertumbuhan jualan sebenar.",
+        "shortDescription": "Dari kedudukan jenama, struktur penulisan iklan (copywriting) hingga reka bentuk visual, kami cipta laman web yang benar-benar menjana pertanyaan pelanggan.",
         "serviceDetail": {
-          "1": "Brand website design and development.",
-          "2": "Event / Product Landing Page",
-          "3": "SEO and performance optimization",
-          "4": "CMS integration, allowing marketing to update content independently"
+          "1": "Reka bentuk dan pembangunan laman web rasmi jenama",
+          "2": "Halaman Pendaratan (Landing Page) Acara / Penjualan Produk",
+          "3": "Pengoptimuman Enjin Carian (SEO) dan penalaan prestasi web",
+          "4": "Penyepaduan Sistem Pengurusan Kandungan (CMS) untuk kemudahan pemasaran"
         }
       },
       "maintenanceAndCloudManagement": {
-        "label": "Maintenance & Cloud Management",
-        "description": "Ensuring high availability, bulletproof security, and smooth daily operations. We handle the servers, continuous deployments, and technical monitoring, so you can sleep well and focus entirely on your business.",
-        "shortDescription": "Going live is just the beginning. We offer long-term maintenance and cloud hosting, so you don't have to build your own IT team.",
+        "label": "Penyelenggaraan & Pengurusan Awan (Cloud)",
+        "description": "Memastikan ketersediaan sistem yang tinggi, keselamatan kebal, dan operasi harian yang lancar. Kami menguruskan pelayan, penyebaran kod (deployment), dan pemantauan teknikal agar anda boleh fokus sepenuhnya pada teras perniagaan.",
+        "shortDescription": "Pelancaran hanyalah satu permulaan. Kami menawarkan penyelenggaraan jangka panjang dan pengehosan awan, agar anda tidak perlu membina pasukan IT sendiri yang mahal.",
         "serviceDetail": {
-          "1": "Cloud Infrastructure Design & Strategy (AWS, GCP, Cloudflare)",
-          "2": "System Monitoring, Data Backup & Disaster Recovery Solutions",
-          "3": "Performance Tuning, Scalability Enhancement & Cost Optimization",
-          "4": "Monthly Operations Reports, Infrastructure Reviews & Technical Advisory"
+          "1": "Reka Bentuk & Strategi Infrastruktur Awan (AWS, GCP, Cloudflare)",
+          "2": "Pemantauan Sistem 24/7, Sandaran Data & Pemulihan Bencana",
+          "3": "Penalaan Prestasi, Peningkatan Skala & Pengoptimuman Kos",
+          "4": "Laporan Operasi Bulanan, Semakan Keselamatan Infrastruktur & Nasihat Teknikal"
         }
       }
     }
   },
   "about": {
-    "heroTag": "Our Vision",
-    "heroTitle1": "Leading You Forward",
-    "heroTitle2": "with a Solid Technical Foundation",
-    "heroDescription": "The name \"Yozan (躍棧)\" embodies \"Leading Forward (躍)\" and \"Technology Stack (棧)\". We believe that the ambition of SMEs should never be bottlenecked by expensive, cumbersome, or rigid IT infrastructure.",
-    "storyTag": "Our Story",
-    "storyTitle": "Bridging the Technology Gap",
-    "storyP1": "Yozan Tech was founded on a simple premise: SMEs deserve the same high-quality technical foundation as large enterprises. For too long, we've watched small businesses struggle with fragmented tools, exorbitant agency fees, and unmaintainable code.",
-    "storyP2": "We exist to change that. We offer long-term technology partnerships—acting as your dedicated in-house engineering team. We don't just deliver a project and walk away; we stay by your side to ensure your digital infrastructure evolves seamlessly as your business scales.",
-    "principleTag": "Our Principles",
-    "principleTitle": "What We Believe In",
-    "ctaTitle": "Let's Build Something Great Together",
-    "ctaDescription": "We'd love to hear your story. Let's grab a coffee and explore how the right technology can accelerate your growth.",
-    "ctaBtn": "Schedule a Chat",
+    "heroTag": "Visi Kami",
+    "heroTitle1": "Memacu Anda Ke Hadapan",
+    "heroTitle2": "dengan Asas Teknikal Yang Kukuh",
+    "heroDescription": "Nama 'Yozan' menggabungkan elemen 'Melangkah Ke Hadapan (Yue)' dan 'Timbunan Teknologi (Zhan)'. Kami percaya bahawa impian PKS tidak sepatutnya disekat oleh infrastruktur IT yang mahal, rumit, atau tidak fleksibel.",
+    "storyTag": "Kisah Kami",
+    "storyTitle": "Merapatkan Jurang Teknologi",
+    "storyP1": "Yozan Tech ditubuhkan dengan satu matlamat ringkas: PKS layak menerima asas teknikal berkualiti tinggi setaraf syarikat korporat besar. Sudah sekian lama kami melihat perniagaan kecil bergelut dengan alat yang tidak bersepadu, caj agensi yang melampau, dan kod sistem yang sukar diselenggara.",
+    "storyP2": "Kami wujud untuk mengubah keadaan ini. Kami menawarkan perkongsian teknologi jangka panjang—bertindak umpama pasukan kejuruteraan dalaman anda sendiri. Kami tidak hanya menyerahkan projek dan berlalu pergi; kami sentiasa di sisi untuk memastikan infrastruktur digital anda berkembang seiring dengan skala perniagaan anda.",
+    "principleTag": "Prinsip Kami",
+    "principleTitle": "Apa Yang Kami Pegang",
+    "ctaTitle": "Mari Bina Sesuatu Yang Hebat Bersama",
+    "ctaDescription": "Kami sentiasa teruja untuk mendengar kisah perniagaan anda. Mari minum kopi bersama dan bincangkan bagaimana teknologi yang tepat boleh memacu pertumbuhan anda.",
+    "ctaBtn": "Jadualkan Sesi Sembang",
     "principles": {
       "companionship": {
-        "title": "Partnership Over Handoffs",
-        "description": "Going live is just the beginning. We treat every engagement as a long-term alliance, not a one-off transaction. Your success is our ongoing responsibility."
+        "title": "Rakan Kongsi, Bukan Sekadar Transaksi",
+        "description": "Pelancaran hanyalah permulaan. Kami menganggap setiap projek sebagai satu perikatan jangka panjang, bukan jualan pakai buang. Kejayaan anda adalah tanggungjawab berterusan kami."
       },
       "simplicity": {
-        "title": "Substance Over Buzzwords",
-        "description": "The best systems are imperceptible. We architect elegant, perfectly-fitted solutions rather than piling on unnecessary technical jargon or trendy frameworks."
+        "title": "Praktikaliti Lebih Utama",
+        "description": "Sistem yang terbaik adalah sistem yang mudah digunakan. Kami merangka penyelesaian yang kemas dan tepat, tanpa membebankan anda dengan istilah teknikal yang tidak perlu atau trend teknologi yang kurang praktikal."
       },
       "honesty": {
-        "title": "Radical Transparency",
-        "description": "We will tell you exactly what you don't need. If a feature exceeds your budget without strong ROI, we'll advise against it. We refuse to overpromise just to close a deal."
+        "title": "Ketelusan Yang Mutlak",
+        "description": "Kami akan beritahu secara terus terang apa yang anda tidak perlukan. Jika ada ciri yang melebihi bajet tanpa pulangan pelaburan (ROI) yang berbaloi, kami akan menasihati anda sebaliknya. Kami enggan memberi janji manis semata-mata untuk memenangi projek."
       }
     }
   },
   "footer": {
-    "description": "Designed for SMEs and startups, providing a modern, long-term maintainable digital infrastructure.",
-    "guide": "Guide",
-    "contactUs": "Contact Us",
-    "businessHours": "Monday - Sunday • 09:00 - 18:00",
-    "language": "Language"
+    "description": "Direka khusus untuk PKS dan syarikat pemula (startups), menyediakan infrastruktur digital moden yang mudah diselenggara untuk jangka masa panjang.",
+    "guide": "Panduan Laman",
+    "contactUs": "Hubungi Kami",
+    "businessHours": "Isnin - Ahad • 09:00 - 18:00",
+    "language": "Bahasa"
   },
   "consultationForm": {
-    "title": "Reserve a Consultation",
-    "description": "Please fill in the details below, and we will get back to you shortly.",
-    "namePlaceholder": "How Shall We Address You?",
-    "contactPlaceholder": "How Shall We Contact You?",
-    "messagePlaceholder": "What Are Your Thoughts?",
-    "submit": "Submit",
-    "sending": "Sending...",
-    "successTitle": "Sent Successfully!",
-    "successMessage": "We will get back to you shortly.",
-    "closingIn": "Closing in",
-    "close": "Close",
-    "errorMessage": "Application Sent Failed! Please Try Again Later.",
-    "rateLimitMessage": "You have reached the daily limit of 3 submissions. Please try again tomorrow."
+    "title": "Tempah Konsultasi",
+    "description": "Sila isikan butiran di bawah, dan kami akan menghubungi anda dalam masa terdekat.",
+    "namePlaceholder": "Bagaimanakah kami boleh memanggil anda?",
+    "contactPlaceholder": "Cara terbaik untuk dihubungi (cth. Emel, Telefon, WhatsApp)?",
+    "messagePlaceholder": "Apakah idea atau keperluan semasa anda?",
+    "submit": "Hantar Maklumat",
+    "sending": "Sedang Dihantar...",
+    "successTitle": "Berjaya Dihantar!",
+    "successMessage": "Kami telah menerima mesej anda dan akan menghubungi anda secepat mungkin.",
+    "closingIn": "Akan ditutup dalam",
+    "close": "Tutup",
+    "errorMessage": "Penghantaran Gagal! Sila cuba lagi sebentar atau hubungi kami melalui cara lain.",
+    "rateLimitMessage": "Anda telah mencapai had harian sebanyak 3 penyerahan. Sila cuba lagi esok."
   }
 }

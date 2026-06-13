@@ -39,7 +39,7 @@ export default async function Home() {
   return (
     <div className="flex flex-col flex-1">
       {/* Hero Section */}
-      <section className="flex flex-col md:flex-row bg-surface-50 min-h-[calc(100vh-64px)] w-full items-center justify-center p-6 md:p-24 gap-12 md:gap-24 border-b border-surface-200/80">
+      <section className="flex flex-col md:flex-row bg-surface-50 min-h-[calc(100vh-64px)] w-full items-center justify-center px-4 py-8 md:p-24! gap-12 md:gap-24 border-b border-surface-200/80">
         <div className="flex flex-col gap-6 md:gap-8 flex-1 mt-auto md:mt-0 items-center md:items-start justify-center">
           <FadeIn
             delay={0.2}
@@ -67,10 +67,10 @@ export default async function Home() {
             </p>
           </FadeIn>
           <div className="flex flex-col md:flex-row text-sm md:text-base  items-start md:items-center gap-4 lg:gap-6 mt-2">
-            <FadeIn delay={0.8} initialX={-20}>
+            <FadeIn delay={0.8} initialX={-20} className="w-full md:w-auto">
               <Link
                 href="/services"
-                className="text-sm flex w-full md:w-auto items-center hover:scale-105 justify-center gap-2.5 bg-brand-600 text-surface-50 px-5 py-3 rounded-full cursor-pointer font-bold transition-all hover:bg-brand-700 duration-300 group"
+                className="max-md:w-full text-sm flex w-full md:w-auto items-center hover:scale-105 justify-center gap-2.5 bg-brand-600 text-surface-50 px-5 py-3 rounded-full cursor-pointer font-bold transition-all hover:bg-brand-700 duration-300 group"
               >
                 {t("heroBtn1")}
                 <ArrowRight
@@ -95,7 +95,7 @@ export default async function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="flex flex-col min-h-[calc(100vh-64px)] w-full items-center justify-center p-6 md:p-24 gap-8 md:gap-12 border-b border-surface-200/80">
+      <section className="flex flex-col min-h-[calc(100vh-64px)] w-full items-center justify-center p-4 py-8 md:p-24! gap-8 md:gap-16 border-b border-surface-200/80">
         <div className="flex flex-col gap-2 w-full">
           <FadeIn
             delay={0.2}
@@ -105,7 +105,7 @@ export default async function Home() {
             {t("services")}
           </FadeIn>
           <FadeIn delay={0.4} initialX={-20}>
-            <h2 className="text-3xl md:text-4xl text-surface-900 font-bold">
+            <h2 className="text-2xl md:text-4xl text-surface-900 font-bold">
               {t("serviceTitle")}
             </h2>
           </FadeIn>
@@ -126,10 +126,10 @@ export default async function Home() {
               <div className="flex items-center justify-center w-12 h-12 bg-brand-100 text-brand-600 rounded-xl group-hover:scale-110 transition-transform duration-300">
                 <service.icon size={20} />
               </div>
-              <h3 className="text-surface-900 font-bold text-xl mb-1 mt-2">
+              <h3 className="text-surface-900 font-bold text-lg md:text-xl mb-1 mt-2">
                 {tService(`items.${service.id}.label`)}
               </h3>
-              <p className="text-surface-600 text-sm leading-relaxed">
+              <p className="text-surface-600 text-xs md:text-sm leading-relaxed">
                 {tService(`items.${service.id}.shortDescription`)}
               </p>
             </FadeIn>
@@ -138,7 +138,7 @@ export default async function Home() {
       </section>
 
       {/* Why Yozan Tech Section */}
-      <section className="flex flex-col bg-surface-50 min-h-[calc(100vh-64px)] w-full items-center justify-center p-6 md:p-24 gap-8 md:gap-12 border-b border-surface-200/80">
+      <section className="flex flex-col bg-surface-50 min-h-[calc(100vh-64px)] w-full items-center justify-center px-4 py-8 md:p-24! gap-8 md:gap-16 border-b border-surface-200/80">
         <div className="flex flex-col gap-2 w-full">
           <FadeIn
             delay={0.2}
@@ -148,12 +148,12 @@ export default async function Home() {
             {t("whyYozan")}
           </FadeIn>
           <FadeIn delay={0.4} initialX={-20}>
-            <h2 className="text-3xl md:text-4xl text-surface-900 font-bold">
+            <h2 className="text-2xl md:text-4xl text-surface-900 font-bold">
               {t("whyYozanTitle")}
             </h2>
           </FadeIn>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 w-full mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16 w-full mt-4">
           {yozanValues.map((value, index) => (
             <FadeIn
               delay={0.6 + index * 0.2}
@@ -162,13 +162,13 @@ export default async function Home() {
               className="flex items-start gap-4 group"
             >
               <div className="bg-brand-100 text-brand-600 rounded-full p-3 shrink-0 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
-                <value.icon size={22} />
+                <value.icon size={20} />
               </div>
               <div className="flex flex-col gap-1.5">
-                <h3 className="font-bold text-surface-900 text-lg">
+                <h3 className="font-bold text-surface-900 text-base md:text-lg">
                   {t(`values.${value.id}.label`)}
                 </h3>
-                <p className="text-surface-600 text-sm leading-relaxed">
+                <p className="text-surface-600 text-xs md:text-sm leading-relaxed">
                   {t(`values.${value.id}.description`)}
                 </p>
               </div>
@@ -179,7 +179,7 @@ export default async function Home() {
         <div className="w-full h-px bg-radial from-surface-200 via-surface-100 to-transparent my-12"></div>
 
         {/* CTA Section */}
-        <div className="flex flex-col items-center text-center gap-4 max-w-3xl">
+        <div className="flex flex-col items-center text-center max-md:pb-12 gap-4 max-w-3xl">
           <FadeIn delay={0.2} initialX={-20}>
             <h2 className="text-3xl md:text-5xl text-surface-900 font-bold leading-tight">
               {t("ctaTitle")}

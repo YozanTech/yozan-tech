@@ -1,144 +1,144 @@
 {
   "navigation": {
-    "home": "Home",
-    "services": "Services",
-    "about": "About",
-    "consultation": "Reserve Consultation"
+    "home": "首页",
+    "services": "服务项目",
+    "about": "关于我们",
+    "consultation": "预约咨询"
   },
   "consultationBtn": {
-    "disabled": "Closed",
-    "disabledTitle": "Closed outside business hours",
-    "operatingHours": "Operating Hours: 9AM - 6PM"
+    "disabled": "已休息",
+    "disabledTitle": "非营业时间",
+    "operatingHours": "营业时间: 9AM - 6PM"
   },
   "home": {
-    "badge": "Technology Partners Built For SME",
-    "title1": "Modernizing the",
-    "title2": "Digital Foundation",
-    "title3": "for SMEs.",
-    "description": "躍棧 (Yozan Tech) provides tailor-made systems, premium websites, and managed cloud services. From the very first line of code to daily maintenance, we are with you for the long haul.",
-    "heroBtn1": "Learn About Our Services",
-    "heroBtn2": "Reserve a Free Consultation",
-    "services": "Services",
-    "serviceTitle": "3 Main Things We Do",
-    "serviceDescription": "We do not pursue large-scale and comprehensive development, but focus on the basic infrastructure that small and medium-sized enterprises truly need.",
-    "whyYozan": "Why Yozan Tech",
-    "whyYozanTitle": "Why Choose Yozan Tech?",
-    "ctaTitle": "Ready to Build a Solid Digital Foundation?",
-    "ctaDescription": "Get a free 30-minute consultation. Let's discuss your current situation and goals, and we will provide tailored technical advice for your business.",
-    "ctaBtn": "Reserve Consultation",
+    "badge": "专为中小企业打造的技术伙伴",
+    "title1": "为中小企业",
+    "title2": "构建现代化的",
+    "title3": "数字基建。",
+    "description": "躍棧 (Yozan Tech) 提供量身定制的业务系统、高品质企业网站以及云端代管服务。从敲下第一行代码到日常的维运，我们与您长久同行。",
+    "heroBtn1": "了解我们的服务",
+    "heroBtn2": "预约免费咨询",
+    "services": "核心服务",
+    "serviceTitle": "我们的三大服务核心",
+    "serviceDescription": "我们不盲目追求庞大繁杂的开发，而是专注于打造中小企业真正需要、扎实落地的数字基础设施。",
+    "whyYozan": "选择躍棧",
+    "whyYozanTitle": "为什么选择躍棧 (Yozan Tech)？",
+    "ctaTitle": "准备好构筑稳固的数字基建了吗？",
+    "ctaDescription": "获取 30 分钟免费咨询。让我们聊聊您目前的业务状况与目标，我们将为您提供专属的技术规划建议。",
+    "ctaBtn": "预约咨询",
     "values": {
       "flexiblePricing": {
-        "label": "Flexible Pricing",
-        "description": "Deliver in phases according to your budget and priorities, eliminating the need for a massive upfront investment."
+        "label": "灵活计价，分阶段交付",
+        "description": "根据您的预算与业务优先级分期交付，无需一次性投入巨额成本。"
       },
       "longTermMaintenance": {
-        "label": "Long-Term Maintenance",
-        "description": "From the very first line of code to daily maintenance, we are with you for the long haul."
+        "label": "长效维护，拒绝孤儿系统",
+        "description": "从构架搭建到上线后的日常维运，我们是您值得信赖的长期技术后盾。"
       },
       "cloudNative": {
-        "label": "Cloud-Native",
-        "description": "Built on modern, scalable infrastructure ensuring your applications remain fast, secure, and highly available at all times."
+        "label": "云原生架构，安全稳定",
+        "description": "基于现代化、可扩展的云端基建打造，确保您的应用时刻保持高速、安全与高可用性。"
       },
       "directCommunication": {
-        "label": "Direct Communication",
-        "description": "Communicate directly with the expert developers building your product, ensuring no requirements are lost through a middleman."
+        "label": "直接对话，无沟通断层",
+        "description": "直接与开发您产品的资深工程师对接，杜绝通过中间人传话导致的业务需求流失。"
       }
     }
   },
   "services": {
-    "service": "Services",
-    "title1": "From One-Line Code",
-    "title2": "to Daily Maintenance",
-    "description": "躍棧 (Yozan Tech) focuses on three service lines, each designed to enable SME to access IT capabilities that were previously only affordable for large companies, at a reasonable cost.",
-    "serviceCount": "Service 0{index}",
-    "ctaTitle": "Unsure Which Option Is the Right Fit for Your Business?",
-    "ctaDescription": "Tell us about your current situation and goals, and we will help you determine where to start investing.",
-    "ctaBtn": "Talk About Your Needs",
+    "service": "服务项目",
+    "title1": "从敲下第一行代码",
+    "title2": "到日常系统维运",
+    "description": "躍棧 (Yozan Tech) 专注于三大服务线。我们致力于让中小企业也能以合理的成本，享有过去只有大型企业才能负担得起的专业 IT 赋能。",
+    "serviceCount": "服务 0{index}",
+    "ctaTitle": "不确定哪种方案最适合您的业务？",
+    "ctaDescription": "告诉我们您面临的痛点和未来目标，我们将协助您评估最值得优先投入的数字方案。",
+    "ctaBtn": "聊聊您的需求",
     "items": {
       "customBusinessSystem": {
-        "label": "Custom Business Systems",
-        "description": "From internal workflows to automated operations. We build tailored ERPs, CRMs, and dashboards that perfectly fit your unique business logic, eliminating the friction of rigid off-the-shelf software.",
-        "shortDescription": "Integrate the processes scattered across Excel, Line groups, and paper documents into a system that truly belongs to you.",
+        "label": "定制化业务系统",
+        "description": "从内部工作流到自动化运营。我们为您打造完全贴合业务逻辑的定制化 ERP、CRM 与数据后台，彻底告别僵硬的套装软件带来的摩擦与不便。",
+        "shortDescription": "将散落在 Excel、Line 群组和纸本中的繁杂流程，整合进真正属于您自己的系统中。",
         "serviceDetail": {
-          "1": "Internal ERP / CRM / Order Management System",
-          "2": "Business process automation and auditing mechanisms",
-          "3": "Back-end dashboards and reports",
-          "4": "Third-party service integration (financial payments, logistics, accounting)"
+          "1": "内部 ERP / CRM / 订单管理系统定制开发",
+          "2": "业务流程自动化与审核机制构建",
+          "3": "数据可视化后台与商业报表开发",
+          "4": "第三方服务API串接 (支付网关、物流系统、财税软件)"
         }
       },
       "premiumCorporateWebsite": {
-        "label": "Premium Corporate Websites",
-        "description": "From high-converting landing pages to robust e-commerce platforms. We craft lightning-fast, SEO-optimized, and visually stunning digital storefronts that elevate your brand and drive actual business growth.",
-        "shortDescription": "From brand positioning and copywriting structure to visual design, create websites that truly generate inquiries and conversions.",
+        "label": "高质感企业网站",
+        "description": "从高转换率的活动着陆页到性能强悍的电商平台。我们精心雕琢加载极速、SEO 友好的数字门面，提升品牌形象并带来实质的业务增长。",
+        "shortDescription": "从品牌定位、文案架构到视觉交互设计，打造真正能为您带来询盘与转化的企业网站。",
         "serviceDetail": {
-          "1": "Brand website design and development.",
-          "2": "Event / Product Landing Page",
-          "3": "SEO and performance optimization",
-          "4": "CMS integration, allowing marketing to update content independently"
+          "1": "品牌官方网站设计与全栈开发",
+          "2": "活动宣传 / 产品发售着陆页 (Landing Page)",
+          "3": "SEO 搜索引擎优化与网站性能极速调优",
+          "4": "CMS 内容管理系统串接，让营销团队自主更新内容"
         }
       },
       "maintenanceAndCloudManagement": {
-        "label": "Maintenance & Cloud Management",
-        "description": "Ensuring high availability, bulletproof security, and smooth daily operations. We handle the servers, continuous deployments, and technical monitoring, so you can sleep well and focus entirely on your business.",
-        "shortDescription": "Going live is just the beginning. We offer long-term maintenance and cloud hosting, so you don't have to build your own IT team.",
+        "label": "云端架构与维运代管",
+        "description": "确保系统高可用、安全防御无死角及日常运作顺畅。我们将全权处理服务器部署、持续集成与技术监控，让您高枕无忧，全心专注在核心业务上。",
+        "shortDescription": "上线只是起点。我们提供长期的系统维运与云端托管服务，您无需自行搭建昂贵的 IT 团队。",
         "serviceDetail": {
-          "1": "Cloud Infrastructure Design & Strategy (AWS, GCP, Cloudflare)",
-          "2": "System Monitoring, Data Backup & Disaster Recovery Solutions",
-          "3": "Performance Tuning, Scalability Enhancement & Cost Optimization",
-          "4": "Monthly Operations Reports, Infrastructure Reviews & Technical Advisory"
+          "1": "云端基础架构设计与策略制定 (AWS, GCP, Cloudflare)",
+          "2": "24/7 系统监控、数据定期备份与灾难恢复方案",
+          "3": "性能调优、架构弹性扩容与云端成本优化",
+          "4": "每月维运报告、架构安全审查与高级技术顾问服务"
         }
       }
     }
   },
   "about": {
-    "heroTag": "Our Vision",
-    "heroTitle1": "Leading You Forward",
-    "heroTitle2": "with a Solid Technical Foundation",
-    "heroDescription": "The name \"Yozan (躍棧)\" embodies \"Leading Forward (躍)\" and \"Technology Stack (棧)\". We believe that the ambition of SMEs should never be bottlenecked by expensive, cumbersome, or rigid IT infrastructure.",
-    "storyTag": "Our Story",
-    "storyTitle": "Bridging the Technology Gap",
-    "storyP1": "Yozan Tech was founded on a simple premise: SMEs deserve the same high-quality technical foundation as large enterprises. For too long, we've watched small businesses struggle with fragmented tools, exorbitant agency fees, and unmaintainable code.",
-    "storyP2": "We exist to change that. We offer long-term technology partnerships—acting as your dedicated in-house engineering team. We don't just deliver a project and walk away; we stay by your side to ensure your digital infrastructure evolves seamlessly as your business scales.",
-    "principleTag": "Our Principles",
-    "principleTitle": "What We Believe In",
-    "ctaTitle": "Let's Build Something Great Together",
-    "ctaDescription": "We'd love to hear your story. Let's grab a coffee and explore how the right technology can accelerate your growth.",
-    "ctaBtn": "Schedule a Chat",
+    "heroTag": "我们的愿景",
+    "heroTitle1": "以扎实技术基底，",
+    "heroTitle2": "助您业务飞跃前行",
+    "heroDescription": "“躍棧”之名，寓意着“业务飞跃 (躍)”与“技术栈 (棧)”。我们坚信，中小企业的雄心壮志，绝不应被昂贵、笨重或僵化的 IT 基础设施所限制。",
+    "storyTag": "品牌故事",
+    "storyTitle": "填平技术落差的鸿沟",
+    "storyP1": "躍棧 (Yozan Tech) 创立的初衷非常简单：中小企业同样值得拥有与大型企业同等高质量的技术基石。长久以来，我们目睹了太多小企业受困于碎片化的工具、高昂的接案公司报价以及难以维护的劣质代码。",
+    "storyP2": "我们的存在就是为了改变这一现状。我们提供长期的技术伙伴关系——如同您的专属内部工程团队。我们不会在项目交付后就拍拍屁股走人；我们会一直陪伴在侧，确保您的数字基础设施随着业务规模的扩大而无缝升级。",
+    "principleTag": "核心准则",
+    "principleTitle": "我们所坚守的信念",
+    "ctaTitle": "让我们携手创造非凡",
+    "ctaDescription": "我们非常乐意倾听您的故事。让我们喝杯咖啡，探讨合适的技术该如何加速您的业务增长。",
+    "ctaBtn": "预约交流",
     "principles": {
       "companionship": {
-        "title": "Partnership Over Handoffs",
-        "description": "Going live is just the beginning. We treat every engagement as a long-term alliance, not a one-off transaction. Your success is our ongoing responsibility."
+        "title": "是长久伙伴，不是一次性买卖",
+        "description": "系统上线只是一个开始。我们将每一次合作视为长期的战略联盟，而非单次交易。您的成功，是我们持续肩负的责任。"
       },
       "simplicity": {
-        "title": "Substance Over Buzzwords",
-        "description": "The best systems are imperceptible. We architect elegant, perfectly-fitted solutions rather than piling on unnecessary technical jargon or trendy frameworks."
+        "title": "务实落地，拒绝盲目跟风",
+        "description": "最好的系统应当是润物细无声的。我们致力于构建优雅且完美契合您业务的解决方案，而非堆砌不必要的技术黑话或盲目追逐流行框架。"
       },
       "honesty": {
-        "title": "Radical Transparency",
-        "description": "We will tell you exactly what you don't need. If a feature exceeds your budget without strong ROI, we'll advise against it. We refuse to overpromise just to close a deal."
+        "title": "极致透明，坦诚相待",
+        "description": "我们会直言不讳地告诉您“不需要什么”。如果某项功能预算高昂却无法带来相应的投资回报，我们会极力劝阻。我们拒绝为了成交而过度承诺。"
       }
     }
   },
   "footer": {
-    "description": "Designed for SMEs and startups, providing a modern, long-term maintainable digital infrastructure.",
-    "guide": "Guide",
-    "contactUs": "Contact Us",
-    "businessHours": "Monday - Sunday • 09:00 - 18:00",
-    "language": "Language"
+    "description": "专为中小企业与新创团队打造，提供现代化、可长期维护的数字基建服务。",
+    "guide": "网站导览",
+    "contactUs": "联系我们",
+    "businessHours": "星期一至日 • 09:00 - 18:00",
+    "language": "语言"
   },
   "consultationForm": {
-    "title": "Reserve a Consultation",
-    "description": "Please fill in the details below, and we will get back to you shortly.",
-    "namePlaceholder": "How Shall We Address You?",
-    "contactPlaceholder": "How Shall We Contact You?",
-    "messagePlaceholder": "What Are Your Thoughts?",
-    "submit": "Submit",
-    "sending": "Sending...",
-    "successTitle": "Sent Successfully!",
-    "successMessage": "We will get back to you shortly.",
-    "closingIn": "Closing in",
-    "close": "Close",
-    "errorMessage": "Application Sent Failed! Please Try Again Later.",
-    "rateLimitMessage": "You have reached the daily limit of 3 submissions. Please try again tomorrow."
+    "title": "预约咨询",
+    "description": "请填写下方资料，我们将在短时间内与您联系。",
+    "namePlaceholder": "请问该如何称呼您？",
+    "contactPlaceholder": "您偏好的联系方式 (如 Email, 电话, Line)？",
+    "messagePlaceholder": "您目前有什么想法或需求？",
+    "submit": "提交预约",
+    "sending": "发送中...",
+    "successTitle": "发送成功！",
+    "successMessage": "我们已收到您的信息，将尽快与您联系。",
+    "closingIn": "即将关闭",
+    "close": "关闭",
+    "errorMessage": "发送失败！请稍后再试或直接通过其他方式联系我们。",
+    "rateLimitMessage": "您已达到每日提交次数上限（3次）。请明天再试。"
   }
 }
