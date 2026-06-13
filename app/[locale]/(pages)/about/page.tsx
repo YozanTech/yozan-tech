@@ -3,10 +3,18 @@ import ConsultationButton from "@/components/ui/ConsultationButton";
 import { PRINCIPLE } from "@/constants/principle";
 import { getTranslations } from "next-intl/server";
 
-export const metadata = {
-  title: "About",
-  description: "All information about Yozan Tech",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "navigation" });
+
+  return {
+    title: t("about"),
+  };
+}
 
 export default async function AboutPage() {
   const t = await getTranslations("about");

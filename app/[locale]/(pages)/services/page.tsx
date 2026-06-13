@@ -4,10 +4,18 @@ import { SERVICES } from "@/constants/service";
 import { Check } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-export const metadata = {
-  title: "Services",
-  description: "The service that provides by Yozan Tech",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "navigation" });
+
+  return {
+    title: t("services"),
+  };
+}
 
 export default async function ServicePage() {
   const t = await getTranslations("services");
