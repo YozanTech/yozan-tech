@@ -33,6 +33,8 @@ export const metadata: Metadata = {
   },
   description:
     "躍棧 (Yozan Tech) provides tailor-made systems, premium websites, and managed cloud services. From the very first line of code to daily maintenance, we are with you for the long haul.",
+  keywords:
+    "Yozan Tech, Yozan, YozanTech, 躍棧, 定制化系統, 網站開發, 雲端服務, IT服務, 客製化系統, 網頁設計, 系統維護, 軟體開發, Software Development, IT Company, Software Company, Website Development, Cloud Services, IT Services, System Maintenance, Tailor-made Systems, Web Design, Cloud Computing, IT Support",
   openGraph: {
     title: "Yozan Tech",
     description:
