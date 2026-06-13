@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import ContactForm from "@/components/ui/ConsultationForm";
+import BackToTop from "@/components/ui/BackToTop";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -49,18 +50,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  verification: {
+    google: process.env.SITE_VERIFICATION,
+  },
 };
 
 export default async function RootLayout({
   children,
-  params
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
   const messages = await getMessages();
-  
+
   return (
     <html
       lang={locale}
@@ -73,6 +77,7 @@ export default async function RootLayout({
           <MobileNav />
           <Footer />
           <ContactForm />
+          <BackToTop />
         </NextIntlClientProvider>
       </body>
     </html>

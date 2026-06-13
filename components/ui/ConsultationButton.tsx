@@ -90,7 +90,7 @@ export default function ConsultationButton({
     "bg-surface-400 text-surface-50 cursor-not-allowed opacity-80 border-transparent";
 
   const disabledText = isHeader
-    ? t("disabledTitle")
+    ? t("disabled")
     : `${t("disabled")} (${t("operatingHours")})`;
 
   return (

@@ -123,14 +123,22 @@
     "description": "Designed for SMEs and startups, providing a modern, long-term maintainable digital infrastructure.",
     "guide": "Guide",
     "contactUs": "Contact Us",
-    "businessHours": "Monday - Sunday • 09:00 - 18:00"
+    "businessHours": "Monday - Sunday • 09:00 - 18:00",
+    "language": "Language"
   },
   "consultationForm": {
     "title": "Reserve a Consultation",
     "description": "Please fill in the details below, and we will get back to you shortly.",
     "namePlaceholder": "How Shall We Address You?",
-    "emailPlaceholder": "How Shall We Contact You?",
+    "contactPlaceholder": "How Shall We Contact You?",
     "messagePlaceholder": "What Are Your Thoughts?",
-    "submit": "Submit"
+    "submit": "Submit",
+    "sending": "Sending...",
+    "successTitle": "Sent Successfully!",
+    "successMessage": "We will get back to you shortly.",
+    "closingIn": "Closing in",
+    "close": "Close",
+    "errorMessage": "Application Sent Failed! Please Try Again Later.",
+    "rateLimitMessage": "You have reached the daily limit of 3 submissions. Please try again tomorrow."
   }
 }

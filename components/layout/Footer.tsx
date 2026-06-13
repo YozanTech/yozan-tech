@@ -2,13 +2,16 @@ import { Link } from "@/i18n/routing";
 import FadeIn from "../FadeIn";
 import { NAVIGATION } from "@/constants/navigation";
 import { useTranslations } from "next-intl";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 export default function Footer() {
   const tNav = useTranslations("navigation");
   const tFooter = useTranslations("footer");
 
   return (
-    <footer className="w-full flex flex-col md:flex-row items-start justify-between px-6 md:px-16 py-8 text-surface-600 text-sm min-h-52 gap-10 md:gap-16 bg-surface-100/50">
+    <footer className="w-full flex px-6 md:px-16 py-10 text-surface-600 text-sm gap-12">
+      {/* Main footer content */}
+      {/* Brand + description */}
       <div className="flex flex-col gap-4 h-full w-full flex-2">
         <FadeIn
           delay={0.2}
@@ -28,6 +31,7 @@ export default function Footer() {
         </FadeIn>
       </div>
 
+      {/* Navigation links */}
       <div className="flex-1 flex flex-col gap-4 justify-start w-full">
         <FadeIn
           delay={0.2}
@@ -50,28 +54,39 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className="flex-1 flex flex-col gap-4 justify-start w-full">
-        <FadeIn
-          delay={0.2}
-          initialY={20}
-          className="text-surface-900 font-semibold text-lg"
-        >
-          {tFooter("contactUs")}
-        </FadeIn>
-        <FadeIn delay={0.4} initialY={20}>
-          <Link
-            className="text-surface-600 hover:text-brand-600"
-            href="mailto:yozan.tech@gmail.com"
+
+      {/* Contact info */}
+      <div className="flex-1 flex flex-col justify-between gap-4 w-full h-full">
+        <div className="flex flex-col gap-4">
+          <FadeIn
+            delay={0.2}
+            initialY={20}
+            className="text-surface-900 font-semibold text-lg"
           >
-            yozan.tech@gmail.com
-          </Link>
-        </FadeIn>
+            {tFooter("contactUs")}
+          </FadeIn>
+          <FadeIn delay={0.4} initialY={20}>
+            <Link
+              className="text-surface-600 hover:text-brand-600"
+              href="mailto:yozan.tech@gmail.com"
+            >
+              yozan.tech@gmail.com
+            </Link>
+          </FadeIn>
+        </div>
         <FadeIn delay={0.6} initialY={20}>
-          <div className="mt-4 font-medium">
+          <div className="mt-auto mb-0 font-medium">
             {tFooter("businessHours")}
           </div>
         </FadeIn>
       </div>
+
+      <FadeIn delay={0.2} initialY={10} className="flex flex-col gap-4 flex-1">
+        <div className="text-surface-900 font-semibold text-lg">
+          {tFooter("language")}
+        </div>
+        <LanguageSwitcher />
+      </FadeIn>
     </footer>
   );
 }

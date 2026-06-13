@@ -1,19 +1,74 @@
 "use client";
 import FadeIn from "@/components/FadeIn";
 import { useModalStore } from "@/store/useModalStore";
-import { X, CheckCircle, AlertCircle } from "lucide-react";
+import { X, CheckCircle, AlertCircle, Ban } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+
+const RATE_LIMIT_KEY = "yozan_consultation_submissions";
+const DAILY_LIMIT = 3;
+
+interface SubmissionRecord {
+  date: string; // "YYYY-MM-DD"
+  count: number;
+}
+
+/** Returns today's date string in local timezone as "YYYY-MM-DD" */
+function getTodayString(): string {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+}
+
+/** Reads current submission record from localStorage */
+function getSubmissionRecord(): SubmissionRecord {
+  try {
+    const raw = localStorage.getItem(RATE_LIMIT_KEY);
+    if (!raw) return { date: getTodayString(), count: 0 };
+    const record: SubmissionRecord = JSON.parse(raw);
+    // Reset if it's a new day
+    if (record.date !== getTodayString()) {
+      return { date: getTodayString(), count: 0 };
+    }
+    return record;
+  } catch {
+    return { date: getTodayString(), count: 0 };
+  }
+}
+
+/** Increments the submission count in localStorage */
+function incrementSubmissionCount(): void {
+  const record = getSubmissionRecord();
+  localStorage.setItem(
+    RATE_LIMIT_KEY,
+    JSON.stringify({ date: record.date, count: record.count + 1 })
+  );
+}
+
+/** Returns true if the user has hit the daily limit */
+function isRateLimited(): boolean {
+  return getSubmissionRecord().count >= DAILY_LIMIT;
+}
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [countdown, setCountdown] = useState(5);
   const [errorToast, setErrorToast] = useState<string | null>(null);
+  const [rateLimited, setRateLimited] = useState(false);
 
   const { isOpen, onClose } = useModalStore();
   const t = useTranslations("consultationForm");
+
+  const [prevIsOpen, setPrevIsOpen] = useState(isOpen);
+
+  // Check rate limit whenever the modal opens (update state during render)
+  if (isOpen !== prevIsOpen) {
+    setPrevIsOpen(isOpen);
+    if (isOpen && typeof window !== "undefined") {
+      setRateLimited(isRateLimited());
+    }
+  }
 
   // Handle countdown and auto-close for success modal
   useEffect(() => {
@@ -40,6 +95,13 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // Guard: double-check rate limit at submit time
+    if (isRateLimited()) {
+      setRateLimited(true);
+      return;
+    }
+
     setIsLoading(true);
     setErrorToast(null);
 
@@ -60,6 +122,8 @@ export default function ContactForm() {
       });
 
       if (res.ok) {
+        // Only increment count on successful submission
+        incrementSubmissionCount();
         setIsSuccess(true);
       } else {
         setErrorToast(t("errorMessage") || "Error! Please Try Again Later.");
@@ -114,7 +178,30 @@ export default function ContactForm() {
             </AnimatePresence>
 
             <AnimatePresence mode="wait">
-              {isSuccess ? (
+              {rateLimited ? (
+                /* Rate limit reached screen */
+                <motion.div
+                  key="rate-limited"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex flex-col items-center justify-center text-center gap-4"
+                >
+                  <div className="p-4 shadow-inner aspect-square! bg-surface-200 text-surface-500 rounded-lg flex items-center justify-center mb-2">
+                    <Ban size={32} />
+                  </div>
+                  <h2 className="text-xl font-bold text-surface-900">
+                    {t("rateLimitMessage")}
+                  </h2>
+                  <button
+                    onClick={handleClose}
+                    className="mt-4 px-6 py-2 bg-surface-200 hover:bg-surface-300 cursor-pointer transition-all duration-300 hover:scale-105 text-surface-700 rounded-lg text-base font-medium"
+                  >
+                    {t("close")}
+                  </button>
+                </motion.div>
+              ) : isSuccess ? (
                 <motion.div
                   key="success"
                   initial={{ opacity: 0, scale: 0.95 }}

@@ -11,6 +11,7 @@ import FadeIn from "@/components/FadeIn";
 import ConsultationButton from "@/components/ui/ConsultationButton";
 import { getTranslations } from "next-intl/server";
 import HeroGraphic from "@/components/ui/HeroGraphic";
+import { Link } from "@/i18n/routing";
 
 const yozanValues = [
   {
@@ -67,13 +68,16 @@ export default async function Home() {
           </FadeIn>
           <div className="flex flex-col md:flex-row text-sm md:text-base  items-start md:items-center gap-4 lg:gap-6 mt-2">
             <FadeIn delay={0.8} initialX={-20}>
-              <button className="text-sm flex w-full md:w-auto items-center hover:scale-105 justify-center gap-2.5 bg-brand-600 text-surface-50 px-5 py-3 rounded-full cursor-pointer font-bold transition-all hover:bg-brand-700 duration-300 group">
+              <Link
+                href="/services"
+                className="text-sm flex w-full md:w-auto items-center hover:scale-105 justify-center gap-2.5 bg-brand-600 text-surface-50 px-5 py-3 rounded-full cursor-pointer font-bold transition-all hover:bg-brand-700 duration-300 group"
+              >
                 {t("heroBtn1")}
                 <ArrowRight
                   size={16}
                   className="group-hover:translate-x-1 transition-all duration-300"
                 />
-              </button>
+              </Link>
             </FadeIn>
             <FadeIn delay={1.0} initialX={-20}>
               <ConsultationButton text={t("heroBtn2")} variant="outline" />
